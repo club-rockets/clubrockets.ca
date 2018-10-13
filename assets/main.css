@@ -485,13 +485,13 @@ header ul li:hover {
     padding-top: 0.5em;
 }
 
-.rocket-tab-ookpik .rocket-info .rocket-info-keys td {
+#rocket-tab-ookpik .rocket-info .rocket-info-keys td {
     border-bottom: 3px #7C1807 double;
 }
 
-.rocket-tab-amarok2 .rocket-info .rocket-info-keys td,
-.rocket-tab-amarok3 .rocket-info .rocket-info-keys td {
-    border-bottom: 3px #344EA9 double;
+#rocket-tab-amarok2 .rocket-info .rocket-info-keys td,
+#rocket-tab-amarok3 .rocket-info .rocket-info-keys td {
+    border-bottom: 3px #3369ad double;
 }
 
 .rocket-tab-link .latin {

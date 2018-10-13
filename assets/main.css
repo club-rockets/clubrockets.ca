@@ -1,0 +1,734 @@
+/*******************************************************************************
+*                                   IMPORTS                                    *
+*******************************************************************************/
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,800');
+
+@font-face {
+    font-family: "Moon";
+    src: url("fonts/moon_light.otf");
+}
+
+@font-face {
+    font-family: "Euphemia";
+    src: url("fonts/euphemia.ttf");
+}
+
+/*******************************************************************************
+*                                    GLOBAL                                    *
+*******************************************************************************/
+
+html, body {
+    font-family: "Raleway", sans-serif;
+    font-size: 100%;
+    height: 100%;
+    line-height: 1.45;
+    padding: 0;
+    margin: 0;
+}
+
+#content-container {
+    background: white;
+    z-index: 1;
+    padding-top: 1em;
+}
+
+.content {
+    max-width: 1200px;
+    margin: auto;
+
+}
+
+section:not(:first-of-type) {
+    padding-bottom: 3rem;
+}
+
+section h2 {
+    font-size: 3em;
+    font-weight: normal;
+}
+
+/*******************************************************************************
+*                                    HEADER                                    *
+*******************************************************************************/
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: auto;
+    z-index: 999;
+    transition: top ease-in-out 0.3s;
+}
+
+header #navigation {
+    max-width: 1200px;
+    margin: auto;
+}
+
+header ul{
+    display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header ul li {
+    display: block;
+    list-style-type: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+header ul li .inset {
+    color: #777;
+}
+
+header ul li a {
+    text-decoration: none;
+    font-family: "Raleway", sans-serif;
+    font-size: 12pt;
+    color: white;
+}
+header ul li:hover {
+    color: #bfbfbf;
+}
+
+/*******************************************************************************
+*                                     HERO                                     *
+*******************************************************************************/
+#overlay {
+    position: relative;
+    left: 0;
+    top: 0;
+    height: 100vh;
+	overflow: hidden;
+}
+
+#hero-vid {
+    backface-visibility: hidden;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: -999;
+}
+
+#hero-img {
+    display: block;
+    height: 100vh;
+    z-index: -999;
+}
+
+#title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* z-index: -990; */
+}
+
+#title h1 {
+    color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 20vw;
+    text-align: center;
+}
+
+@media only screen and (min-width: 1600px) {
+    #title h1 {
+        font-size: 20em;
+    }
+}
+
+/*******************************************************************************
+*                                     TEAM                                     *
+*******************************************************************************/
+
+.team-container {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
+
+.team-card {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    width: 20%;
+    min-width: 10em;
+    padding: 2em;
+    text-align: center;
+}
+
+.team-photo img {
+    width: 100%;
+}
+
+.team-card span {
+    display: block;
+}
+
+.team-name {
+    font-size: 1.5em;
+}
+
+.team-role {
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 480px) {
+    .team-card span {
+        font-size: 0.8em;
+    }
+    span.team-name {
+        font-size: 1em;
+    }
+    .team-card {
+        min-width: 7em;
+        padding: 1em;
+    }
+}
+
+/*******************************************************************************
+*                                   GALLERY                                    *
+*******************************************************************************/
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery-overlay-text {
+    position: absolute;
+    bottom: 0;
+    left:50%;
+    transform: translate(-50%,0);
+    width: 100%;
+    text-align: center;
+    background: rgba(232, 24, 9, 0.75);
+    padding-top:0.25em;
+    padding-bottom:0.25em;
+}
+
+.gallery-overlay .gallery-title {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.gallery-overlay {
+    opacity:0;
+    position: absolute;
+    bottom:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+    color: white;
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 500ms;
+    cursor: pointer;
+}
+
+.gallery-overlay:hover {
+    opacity:1;
+}
+
+.gallery-image {
+    height: 20em;
+}
+
+
+.gallery-image {
+    background-size: cover;
+    position: relative;
+}
+
+/* Adaptive image-per-row */
+.gallery-image.double {
+    width: calc(100%);
+}
+
+.gallery-image {
+    width: calc(100%/2);
+}
+
+@media only screen and (min-width: 600px) {
+    .gallery-image.double {
+        width: calc(100%/2);
+    }
+
+    .gallery-image {
+        width: calc(100%/4);
+    }
+}
+
+
+@media only screen and (min-width: 1200px) {
+    .gallery-image.double {
+        width: calc(100%/3);
+    }
+
+    .gallery-image {
+        width: calc(100%/6);
+        height: auto;
+        padding-top: 25%;
+    }
+}
+
+#gallery-modal-background {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background: rgba(0,0,0,0.50);
+    overflow: auto;
+}
+
+#gallery-modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    height: 90%;
+    transform: translate(-50%, -50%);
+}
+
+#gallery-modal-content img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    max-width: 100%;
+    max-height: 100%;
+    transform: translate(-50%,-50%);
+}
+
+/*******************************************************************************
+*                                   ROCKETS                                    *
+*******************************************************************************/
+
+.rocket-tabs-container {
+    background: #32393A;
+    position: relative;
+}
+
+.rocket-tabs-content {
+    max-width: 1200px;
+    margin: auto;
+    overflow-x: auto;
+}
+
+
+.rocket-tab-link {
+    font-size: 1.5em;
+    display: inline-block;
+    padding: 0.5em;
+}
+.rocket-tab-link:hover {
+    color: orange;
+    cursor: pointer;
+}
+
+.rocket-tab-link.tab-active {
+    background-color: #32393A;
+    border-radius: 5px 5px 0 0;
+    color: white;
+}
+
+.rocket-tab-content {
+    display: none;
+    overflow: auto;
+    position: relative;
+    min-width: 400px;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background: #32393A;
+}
+
+.rocket-render {
+    width: 100%;
+}
+
+.rocket-render img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.rocket-tab-content.tab-active {
+    display: block;
+}
+
+.rocket-info {
+    position: absolute;
+    color: white;
+}
+
+.rocket-info.rocket-left {
+    left: 50%;
+    transform: translate(calc(-100% - 2.5em), 0);
+}
+
+.rocket-info.rocket-right {
+    left: 50%;
+    transform: translate(calc(2.5em), 0);
+}
+
+#rocket-switch-side {
+    display: none;
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    z-index: 1;
+    background: white;
+    border: none;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    padding-bottom: 0.3em;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+#rocket-switch-side:hover {
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+@media only screen and (max-width: 750px) {
+    .rocket-tab-content {
+        width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #rocket-switch-side {
+        display: block;
+    }
+
+    .rocket-tab-content.rocket-left-focus .rocket-info.rocket-left {
+        left: 1em;
+        transform: none;
+    }
+
+    .rocket-tab-content.rocket-left-focus .rocket-info.rocket-right {
+        display: none;
+    }
+
+    .rocket-tab-content.rocket-left-focus .rocket-render img {
+        margin-right: 0;
+    }
+
+    .rocket-tab-content.rocket-right-focus .rocket-info.rocket-left {
+        display: none;
+    }
+
+    .rocket-tab-content.rocket-right-focus .rocket-info.rocket-right {
+        left: 20%;
+        transform: none;
+    }
+
+    .rocket-tab-content.rocket-right-focus .rocket-render img {
+        margin-left: 0;
+    }
+}
+
+.rocket-info table {
+    border-spacing: 0;
+    width: 16em;
+    font-family: 'Moon', 'Raleway', sans-serif;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+.rocket-info h3, .rocket-info h4 {
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.rocket-info h3 {
+    font-size: 1.8em;
+}
+
+.rocket-info h4 {
+    margin-top: -0.75em;
+    font-size: 0.9em;
+    font-weight: normal;
+}
+
+.rocket-info h4, .rocket-info-keys {
+    color: #aaaaaa;
+}
+
+.rocket-info td {
+    width: 8em;
+}
+
+.rocket-info table .unit {
+    text-transform: none;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.6em;
+}
+
+.rocket-info .rocket-info-keys {
+    font-size: 0.6em;
+}
+.rocket-info .rocket-info-keys td {
+    padding-top: 0.5em;
+}
+
+.rocket-tab-ookpik .rocket-info .rocket-info-keys td {
+    border-bottom: 3px #7C1807 double;
+}
+
+.rocket-tab-amarok2 .rocket-info .rocket-info-keys td,
+.rocket-tab-amarok3 .rocket-info .rocket-info-keys td {
+    border-bottom: 3px #344EA9 double;
+}
+
+.rocket-tab-link .latin {
+    display: block;
+}
+.rocket-tab-link .alt {
+    display: none;
+}
+
+.rocket-tab-link.tab-active .latin {
+    display: none;
+}
+.rocket-tab-link.tab-active .alt {
+    display: block;
+}
+
+.rocket-info.rocket-summary {
+    top: 30px;
+}
+
+.rocket-info.rocket-nose {
+    top: 30px;
+}
+
+/*******************************************************************************
+*                          OOKPIK ROCKET-INFO OFFSETS                          *
+*******************************************************************************/
+#rocket-tab-ookpik .rocket-info.rocket-airframe {
+    top: 260px;
+}
+
+#rocket-tab-ookpik .rocket-info.rocket-avionics {
+    top: 610px;
+}
+
+#rocket-tab-ookpik .rocket-info.rocket-fins {
+    top: 975px;
+}
+
+#rocket-tab-ookpik .rocket-info.rocket-recovery {
+    top: 340px;
+}
+
+#rocket-tab-ookpik .rocket-info.rocket-booster {
+    top: 740px;
+}
+
+/*******************************************************************************
+*                         AMAROK 3 ROCKET-INFO OFFSETS                         *
+*******************************************************************************/
+#rocket-tab-amarok3 .rocket-info.rocket-airframe {
+    top: 260px;
+}
+
+#rocket-tab-amarok3 .rocket-info.rocket-avionics {
+    top: 555px;
+}
+
+#rocket-tab-amarok3 .rocket-info.rocket-fins {
+    top: 985px;
+}
+
+#rocket-tab-amarok3 .rocket-info.rocket-recovery {
+    top: 360px;
+}
+
+#rocket-tab-amarok3 .rocket-info.rocket-booster {
+    top: 740px;
+}
+
+/*******************************************************************************
+*                         AMAROK 2 ROCKET-INFO OFFSETS                         *
+*******************************************************************************/
+#rocket-tab-amarok2 .rocket-info.rocket-airframe {
+    top: 260px;
+}
+
+#rocket-tab-amarok2 .rocket-info.rocket-avionics {
+    top: 555px;
+}
+
+#rocket-tab-amarok2 .rocket-info.rocket-fins {
+    top: 985px;
+}
+
+#rocket-tab-amarok2 .rocket-info.rocket-recovery {
+    top: 360px;
+}
+
+#rocket-tab-amarok2 .rocket-info.rocket-booster {
+    top: 740px;
+}
+
+/*******************************************************************************
+*                                    SOCIAL                                    *
+*******************************************************************************/
+.social-container {
+    display:flex;
+    justify-content: center;
+}
+
+.social-network {
+    padding: 1em;
+}
+
+.social-network,
+.social-network img {
+    width: 4em;
+}
+
+.social-logos {
+    padding: 3px;
+    text-decoration: none;
+}
+
+.social-address {
+    padding-top:0.5em;
+    padding-bottom:0.5em;
+    text-align: center;
+    width:100%;
+}
+
+/*******************************************************************************
+*                                   PARTNERS                                   *
+*******************************************************************************/
+#partners h3 {
+    width:100%;
+    text-align: center;
+}
+
+.partners-commandant,
+.partners-pilote,
+.partners-specialiste,
+.partners-ingenieur,
+.partners-astronaute,
+.partners-expert {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.partner-logo {
+    padding: 1em;
+}
+.partner-logo img {
+    width: fit-content;
+}
+
+.partners-commandant .partner-logo,
+.partners-commandant .partner-logo img {
+    max-width: 20em;
+    max-height: 10em;
+    margin: auto;
+}
+
+.partners-pilote .partner-logo,
+.partners-pilote .partner-logo img {
+    max-width: 17.5em;
+    max-height: 8.75em;
+    margin: auto;
+}
+
+.partners-specialiste .partner-logo,
+.partners-specialiste .partner-logo img {
+    max-width: 15em;
+    max-height: 7.5em;
+    margin: auto;
+}
+
+.partners-ingenieur .partner-logo,
+.partners-ingenieur .partner-logo img {
+    max-width: 12.5em;
+    max-height: 6.25em;
+    margin: auto;
+}
+
+.partners-astronaute .partner-logo,
+.partners-astronaute .partner-logo img,
+.partners-expert .partner-logo,
+.partners-expert .partner-logo img {
+    max-width: 10em;
+    max-height: 5em;
+    margin: auto;
+}
+
+/*******************************************************************************
+*                                    FOOTER                                    *
+*******************************************************************************/
+footer {
+    padding: 1em;
+    background: white;
+    text-align: center;
+}
+
+footer p {
+    padding: 0;
+    margin: 0;
+}
+
+footer .footer-love {
+    color: #303030;
+}
+
+/*******************************************************************************
+*                                MEDIA QUERIES                                 *
+*******************************************************************************/
+
+@media only screen and (max-width:768px) {
+    #overlay {
+        height: auto;
+        padding-top: 0%;
+    }
+
+    .content {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+}
+
+@media only screen and (min-width:769px) {
+    .visible-mobile, .visible-tablet, .hidden-desktop {
+        display: none !important;
+    }
+    #title {
+        z-index: -990;
+    }
+}
+
+@media only screen and (min-width:480px) and (max-width:768px) {
+    .visible-mobile, .hidden-tablet, .visible-desktop {
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width:479px) {
+    .hidden-mobile, .visible-tablet, .visible-desktop {
+        display: none !important;
+    }
+}

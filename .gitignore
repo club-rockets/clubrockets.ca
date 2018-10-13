@@ -1,0 +1,13 @@
+# Images
+*.jpg
+*.jpeg
+*.png
+*.svg
+
+# Fonts
+*.ttf
+*.otf
+
+# Videos
+*.webm
+*.mp4

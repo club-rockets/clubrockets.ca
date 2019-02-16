@@ -167,6 +167,10 @@ header ul li:hover {
     margin: 1em;
 }
 
+.team-card.wide {
+    width: 80%;
+}
+
 .team-photo img {
     width: 100%;
 }
@@ -193,6 +197,8 @@ header ul li:hover {
     .team-card {
         min-width: 7em;
         padding: 1em;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
     }
 }
 
@@ -592,6 +598,7 @@ header ul li:hover {
 .social-container {
     display:flex;
     justify-content: center;
+    flex-flow: wrap;
 }
 
 .social-network {

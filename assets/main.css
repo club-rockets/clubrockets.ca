@@ -645,9 +645,6 @@ header ul li:hover {
 .partner-logo {
     padding: 1em;
 }
-.partner-logo img {
-    width: fit-content;
-}
 
 .partners-commandant .partner-logo,
 .partners-commandant .partner-logo img {

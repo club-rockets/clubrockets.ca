@@ -349,7 +349,7 @@ header ul li:hover {
 *******************************************************************************/
 
 .rocket-tabs-container {
-    background: #32393A;
+    background: #404040;
     position: relative;
 }
 
@@ -358,7 +358,6 @@ header ul li:hover {
     margin: auto;
     overflow-x: auto;
 }
-
 
 .rocket-tab-link {
     font-size: 1.5em;
@@ -371,61 +370,41 @@ header ul li:hover {
 }
 
 .rocket-tab-link.tab-active {
-    background-color: #32393A;
+    background-color: #404040;
     border-radius: 5px 5px 0 0;
     color: white;
 }
 
 .rocket-tab-content {
     display: none;
-    overflow: auto;
-    position: relative;
-    min-width: 400px;
-    min-height: 1200px;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    background: #32393A;
-}
-
-.rocket-render {
-    width: 100%;
-}
-
-.rocket-render img {
-    display: block;
-    position: absolute;
-    left: 50%;
-    top: 1em;
-    transform: translate(-50%, 0);
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    background: #404040;
 }
 
 .rocket-tab-content.tab-active {
-    display: block;
+    display: flex;
 }
 
 .rocket-info {
-    position: absolute;
     color: white;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 
-.rocket-info.rocket-left {
-    left: 50%;
-    transform: translate(calc(-100% - 2.5em), 0);
+.rocket-render {
+    display: flex;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    flex-direction: column;
+    align-content: center;
 }
 
-.rocket-info.rocket-right {
-    left: 50%;
-    transform: translate(calc(2.5em), 0);
-}
-
-#rocket-tab-aarluk .rocket-info.rocket-left {
-    left: 50%;
-    transform: translate(calc(-100% - 3em), 0);
-}
-
-#rocket-tab-aarluk .rocket-info.rocket-right {
-    left: 50%;
-    transform: translate(calc(3em), 0);
+.rocket-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 #rocket-switch-side {
@@ -459,12 +438,12 @@ header ul li:hover {
         display: block;
     }
 
-    .rocket-tab-content.rocket-left-focus .rocket-info.rocket-left {
+    .rocket-tab-content.rocket-left-focus .rocket-column.rocket-left {
         left: 1em;
         transform: none;
     }
 
-    .rocket-tab-content.rocket-left-focus .rocket-info.rocket-right {
+    .rocket-tab-content.rocket-left-focus .rocket-column.rocket-right {
         display: none;
     }
 
@@ -472,11 +451,11 @@ header ul li:hover {
         margin-right: 0;
     }
 
-    .rocket-tab-content.rocket-right-focus .rocket-info.rocket-left {
+    .rocket-tab-content.rocket-right-focus .rocket-column.rocket-left {
         display: none;
     }
 
-    .rocket-tab-content.rocket-right-focus .rocket-info.rocket-right {
+    .rocket-tab-content.rocket-right-focus .rocket-column.rocket-right {
         left: 20%;
         transform: none;
     }
@@ -551,107 +530,6 @@ header ul li:hover {
 }
 .rocket-tab-link.tab-active .alt {
     display: block;
-}
-
-.rocket-info.rocket-summary {
-    top: 30px;
-}
-
-.rocket-info.rocket-nose {
-    top: 30px;
-}
-
-
-/*******************************************************************************
-*                          OOKPIK ROCKET-INFO OFFSETS                          *
-*******************************************************************************/
-#rocket-tab-aarluk .rocket-info.rocket-avionics {
-    top: 260px;
-}
-
-#rocket-tab-aarluk .rocket-info.rocket-airframe {
-    top: 610px;
-}
-
-#rocket-tab-aarluk .rocket-info.rocket-fins {
-    top: 975px;
-}
-
-#rocket-tab-aarluk .rocket-info.rocket-recovery {
-    top: 260px;
-}
-
-#rocket-tab-aarluk .rocket-info.rocket-booster {
-    top: 740px;
-}
-
-/*******************************************************************************
-*                          OOKPIK ROCKET-INFO OFFSETS                          *
-*******************************************************************************/
-#rocket-tab-ookpik .rocket-info.rocket-airframe {
-    top: 260px;
-}
-
-#rocket-tab-ookpik .rocket-info.rocket-avionics {
-    top: 610px;
-}
-
-#rocket-tab-ookpik .rocket-info.rocket-fins {
-    top: 975px;
-}
-
-#rocket-tab-ookpik .rocket-info.rocket-recovery {
-    top: 340px;
-}
-
-#rocket-tab-ookpik .rocket-info.rocket-booster {
-    top: 740px;
-}
-
-/*******************************************************************************
-*                         AMAROK 3 ROCKET-INFO OFFSETS                         *
-*******************************************************************************/
-#rocket-tab-amarok3 .rocket-info.rocket-airframe {
-    top: 260px;
-}
-
-#rocket-tab-amarok3 .rocket-info.rocket-avionics {
-    top: 555px;
-}
-
-#rocket-tab-amarok3 .rocket-info.rocket-fins {
-    top: 985px;
-}
-
-#rocket-tab-amarok3 .rocket-info.rocket-recovery {
-    top: 360px;
-}
-
-#rocket-tab-amarok3 .rocket-info.rocket-booster {
-    top: 740px;
-}
-
-/*******************************************************************************
-*                         AMAROK 2 ROCKET-INFO OFFSETS                         *
-*******************************************************************************/
-#rocket-tab-amarok2 .rocket-info.rocket-airframe {
-    top: 260px;
-}
-
-#rocket-tab-amarok2 .rocket-info.rocket-avionics {
-    top: 555px;
-}
-
-#rocket-tab-amarok2 .rocket-info.rocket-fins {
-    top: 985px;
-}
-
-#rocket-tab-amarok2 .rocket-info.rocket-recovery {
-    top: 360px;
-}
-
-#rocket-tab-amarok2 .rocket-info.rocket-booster {
-    top: 740px;
 }
 
 /*******************************************************************************
@@ -782,9 +660,6 @@ footer .footer-love {
 @media only screen and (min-width:769px) {
     .visible-mobile, .visible-tablet, .hidden-desktop {
         display: none !important;
-    }
-    #title {
-        /* z-index: -990; */
     }
 }
 

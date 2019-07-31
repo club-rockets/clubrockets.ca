@@ -11,3 +11,6 @@
 # Videos
 *.webm
 *.mp4
+assets/email/
+
+assets/media/

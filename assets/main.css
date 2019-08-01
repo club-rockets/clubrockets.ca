@@ -1,7 +1,6 @@
 /*******************************************************************************
 *                                   IMPORTS                                    *
 *******************************************************************************/
-
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,800');
 
 @font-face {
@@ -17,14 +16,19 @@
 /*******************************************************************************
 *                                    GLOBAL                                    *
 *******************************************************************************/
-
 html, body {
     font-family: "Raleway", sans-serif;
     font-size: 100%;
     height: 100%;
     line-height: 1.45;
     padding: 0;
-    margin: 0;;
+    margin: 0;
+}
+
+body {
+    background-image: url('media/hero/frame.jpg');
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .content-container {
@@ -48,9 +52,46 @@ section h2 {
 }
 
 /*******************************************************************************
+*                                   PARALLAX                                   *
+*******************************************************************************/
+main {
+    perspective: 1px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.parallax-layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.parallax-spacer {
+    height: 50vh;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.16), inset 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.parallax-back {
+    transform: translateZ(-1px) scale(2);
+}
+
+.parallax-spacer#first {
+    background-image: url('media/hero/pole_pitch.jpg');
+}
+
+.parallax-spacer#second {
+    background-image: url('media/hero/tripod.jpg');
+}
+
+/*******************************************************************************
 *                                    HEADER                                    *
 *******************************************************************************/
-
 header {
     position: fixed;
     top: 0;
@@ -58,7 +99,13 @@ header {
     min-width: 100%;
     height: auto;
     z-index: 999;
-    transition: top ease-in-out 0.3s;
+    background: none;
+    transition: background 0.25s;
+}
+
+header.scrolled {
+    background: white;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 header #navigation {
@@ -95,52 +142,45 @@ header ul li a {
     font-size: 12pt;
     color: white;
 }
+
 header ul li:hover {
     color: #bfbfbf;
+}
+
+header.scrolled ul li a {
+    color: black;
+}
+
+header.scrolled ul li:hover {
+    color: #121212
+}
+
+#progress {
+    background: white;
+    height: 0.25em;
+    width: 0;
+    transition: background 0.25s;
+}
+
+header.scrolled #progress {
+    background: #E91E24;
 }
 
 /*******************************************************************************
 *                                     HERO                                     *
 *******************************************************************************/
-main {
-    perspective: 1px;
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-    background-image: url('media/hero/frame.jpg');
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-.parallax-layer {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}
-
-.parallax-spacer {
-    height: 50vh;
-    
-    background-size: cover;
-    background-attachment: fixed;
-    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.16), inset 0 3px 6px rgba(0, 0, 0, 0.23);
-}
-.parallax-spacer#first {
-    background-image: url('media/hero/spacer_1.jpg');
-}
-
-.parallax-spacer#second {
-    background-image: url('media/hero/spacer_2.jpg');
-}
-
-#hero  {
+#hero, #hero-spacer {
     height: 100vh;
 }
 
-.parallax-back {
-    transform: translateZ(-1px) scale(2);
+video#hero-vid {
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    min-width: 100vw;
+    min-height: 100vh;
+    z-index: -999;
 }
 
 #overlay {
@@ -159,6 +199,7 @@ main {
     font-size: 20vw;
     text-align: center;
 }
+
 #title h1 span.logo-red {
     color: #E91E24;
 }
@@ -170,87 +211,8 @@ main {
 }
 
 /*******************************************************************************
-*                                     AWARD                                    *
-*******************************************************************************/
-.award-container {
-    display: flex;
-}
-
-.award-column {
-    flex: 50%;
-    padding: 1em;
-}
-
-.award-column h3 {
-    margin-bottom: 0;
-}
-
-.award-column-left {
-    text-align: right;
-}
-
-.award-column span {
-    display: block;
-}
-
-/*******************************************************************************
-*                                     TEAM                                     *
-*******************************************************************************/
-
-.team-container {
-    display: flex;
-    justify-content: space-evenly;
-    flex-flow: wrap;
-}
-
-.team-card {
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    width: 20%;
-    min-width: 10em;
-    padding: 2em;
-    text-align: center;
-    margin: 1em;
-}
-
-.team-card.wide {
-    width: 80%;
-}
-
-.team-photo img {
-    width: 100%;
-}
-
-.team-card span {
-    display: block;
-}
-
-.team-name {
-    font-size: 1.5em;
-}
-
-.team-role {
-    font-weight: bold;
-}
-
-@media only screen and (max-width: 550px) {
-    .team-card span {
-        font-size: 0.8em;
-    }
-    span.team-name {
-        font-size: 1em;
-    }
-    .team-card {
-        min-width: 7em;
-        padding: 1em;
-        margin-left: 0.5em;
-        margin-right: 0.5em;
-    }
-}
-
-/*******************************************************************************
 *                                   GALLERY                                    *
 *******************************************************************************/
-
 .gallery-container {
     display: flex;
     flex-wrap: wrap;
@@ -282,7 +244,6 @@ main {
     width: 100%;
     height: 100%;
     z-index: 1;
-
     color: white;
     transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 500ms;
     cursor: pointer;
@@ -295,7 +256,6 @@ main {
 .gallery-image {
     height: 20em;
 }
-
 
 .gallery-image {
     background-size: cover;
@@ -387,6 +347,7 @@ main {
     display: inline-block;
     padding: 0.5em;
 }
+
 .rocket-tab-link:hover {
     color: orange;
     cursor: pointer;
@@ -445,6 +406,7 @@ main {
     text-transform: uppercase;
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
+
 #rocket-switch-side:hover {
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
@@ -555,33 +517,27 @@ main {
 }
 
 /*******************************************************************************
-*                                    SOCIAL                                    *
+*                                     AWARD                                    *
 *******************************************************************************/
-.social-container {
-    display:flex;
-    justify-content: center;
-    flex-flow: wrap;
+.award-container {
+    display: flex;
 }
 
-.social-network {
+.award-column {
+    flex: 50%;
     padding: 1em;
 }
 
-.social-network,
-.social-network img {
-    width: 4em;
+.award-column h3 {
+    margin-bottom: 0;
 }
 
-.social-logos {
-    padding: 3px;
-    text-decoration: none;
+.award-column-left {
+    text-align: right;
 }
 
-.social-address {
-    padding-top:0.5em;
-    padding-bottom:0.5em;
-    text-align: center;
-    width:100%;
+.award-column span {
+    display: block;
 }
 
 /*******************************************************************************
@@ -645,6 +601,37 @@ main {
     margin: auto;
 }
 
+
+/*******************************************************************************
+*                                    SOCIAL                                    *
+*******************************************************************************/
+.social-container {
+    display:flex;
+    justify-content: center;
+    flex-flow: wrap;
+}
+
+.social-network {
+    padding: 1em;
+}
+
+.social-network,
+.social-network img {
+    width: 4em;
+}
+
+.social-logos {
+    padding: 3px;
+    text-decoration: none;
+}
+
+.social-address {
+    padding-top:0.5em;
+    padding-bottom:0.5em;
+    text-align: center;
+    width:100%;
+}
+
 /*******************************************************************************
 *                                    FOOTER                                    *
 *******************************************************************************/
@@ -666,13 +653,7 @@ footer .footer-love {
 /*******************************************************************************
 *                                MEDIA QUERIES                                 *
 *******************************************************************************/
-
-@media only screen and (max-width:768px) {
-    #overlay {
-        height: auto;
-        padding-top: 0%;
-    }
-
+@media only screen and (max-width:1200px) {
     .content {
         padding-left: 1em;
         padding-right: 1em;
@@ -697,15 +678,17 @@ footer .footer-love {
     }
 }
 
-
-
-.lds-ring {
+/*******************************************************************************
+*                             CSS LOADING SPINNER                              *
+*******************************************************************************/
+.spinner {
     display: inline-block;
     position: relative;
     width: 64px;
     height: 64px;
-  }
-  .lds-ring div {
+}
+
+.spinner div {
     box-sizing: border-box;
     display: block;
     position: absolute;
@@ -714,23 +697,27 @@ footer .footer-love {
     margin: 6px;
     border: 6px solid #fff;
     border-radius: 50%;
-    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    animation: spinner 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
     border-color: #fff transparent transparent transparent;
-  }
-  .lds-ring div:nth-child(1) {
+}
+
+.spinner div:nth-child(1) {
     animation-delay: -0.45s;
-  }
-  .lds-ring div:nth-child(2) {
+}
+
+.spinner div:nth-child(2) {
     animation-delay: -0.3s;
-  }
-  .lds-ring div:nth-child(3) {
+}
+
+.spinner div:nth-child(3) {
     animation-delay: -0.15s;
-  }
-  @keyframes lds-ring {
+}
+
+@keyframes spinner {
     0% {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
     100% {
-      transform: rotate(360deg);
+            transform: rotate(360deg);
     }
-  }
+}

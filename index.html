@@ -25,7 +25,7 @@
                 <li><span class="inset"> · </span></li>
                 <li><a href="#rockets">FUSÉES</a></li>
                 <li><span class="inset"> · </span></li>
-                <li><a href="#team">ÉQUIPE</a></li>
+                <li><a href="#awards">PRIX</a></li>
                 <li><span class="inset"> · </span></li>
                 <li><a href="#partners">PARTENAIRES</a></li>
                 <li><span class="inset"> · </span></li>
@@ -36,8 +36,13 @@
                 <li><a href="en/">ENGLISH</a></li>
             </ul>
         </div>
+        <div id="progress"></div>
     </header>
-    <main id="#me">
+    <video class="visible-desktop" id="hero-vid" poster="assets/media/hero/frame.jpg" autoplay loop muted>
+        <source type="video/webm" src="assets/media/hero/ookpik.webm" />
+        <source type="video/mp4" src="assets/media/hero/ookpik.mp4" />
+    </video>
+    <main onscroll="scroller()">
         <div id="home">
             <!--Dummy div to force scrolling to the top-->
         </div>
@@ -51,7 +56,7 @@
             </section>
         </div>
         <div class="parallax-layer parallax-base">
-            <div style="height: 100vh"></div>
+            <div id="hero-spacer"></div>
             <div class="content-container">
                 <section id="club">
                     <div class="content">
@@ -1218,7 +1223,7 @@
                         <div class="award-container">
                             <div class="award-column award-column-left">
                                 <h3>3<sup>e</sup> Spaceport America Cup, 2019</h3>
-                                <span class="award-name">2<sup>e</sup> place, 30'000 pieds propulsion commerciale</span>
+                                <span class="award-name">2<sup>e</sup> place, 30 000 pieds propulsion commerciale</span>
                                 <h3>1<sup>re</sup> Spaceport America Cup, 2017</h3>
                                 <span class="award-name">Prix <em>Dr. Gil Moore</em> pour l'innovation</span>
                                 <h3>11<sup>e</sup> IREC, 2016</h3>
@@ -1233,77 +1238,6 @@
                                 <span class="award-name">2<sup>e</sup> place, catégorie de base</span>
                                 <h3>8<sup>e</sup> IREC, 2013</h3>
                                 <span class="award-name">2<sup>e</sup> place, catégorie de base</span>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section id="team" style="display: none;">
-                    <div class="content">
-                        <h2>Équipe</h2>
-                        <div class="team-container">
-                            <div class="team-card">
-                                <div class="team-photo">
-                                    <img src="assets/media/team/alex.jpg" />
-                                </div>
-                                <span class="team-name">Alex Boivin</span>
-                                <span class="team-role">Capitaine</span>
-                                <span class="team-prog">Génie Mécanique</span>
-                            </div>
-                            <div class="team-card">
-                                <div class="team-photo">
-                                    <img src="assets/media/team/cyril.jpg" />
-                                </div>
-                                <span class="team-name">Cyril Pauck-Therrien</span>
-                                <span class="team-role">Co-capitaine</span>
-                                <span class="team-prog">Génie Mécanique</span>
-                            </div>
-                            <div class="team-card">
-                                <div class="team-photo">
-                                    <img src="assets/media/team/jean-simon.jpg" />
-                                </div>
-                                <span class="team-name">Jean-Simon Thibodeau</span>
-                                <span class="team-role">Directeur Aérodynamique</span>
-                                <span class="team-prog">Génie Mécanique</span>
-                            </div>
-                            <div class="team-card">
-                                <div class="team-photo">
-                                    <img src="assets/media/team/david.jpg" />
-                                </div>
-                                <span class="team-name">David Bourgault</span>
-                                <span class="team-role">Directeur Avionique</span>
-                                <span class="team-prog">Génie Logiciel</span>
-                            </div>
-                            <div class="team-card">
-                                <div class="team-photo">
-                                    <img src="assets/media/team/hugo.jpg" />
-                                </div>
-                                <span class="team-name">Hugo Lussier</span>
-                                <span class="team-role">Trésorier</span>
-                                <span class="team-prog">Génie Mécanique</span>
-                            </div>
-                            <div class="team-card">
-                                <div class="team-photo">
-                                    <img src="assets/media/team/alexa.jpg" />
-                                </div>
-                                <span class="team-name">Alexa Cruz</span>
-                                <span class="team-role">Directrice Communication</span>
-                                <span class="team-prog">Génie Mécanique</span>
-                            </div>
-                            <div class="team-card">
-                                <div class="team-photo">
-                                    <img src="assets/media/team/gabriel.jpg" />
-                                </div>
-                                <span class="team-name">Gabriel Perron</span>
-                                <span class="team-role">Directeur Propulsion</span>
-                                <span class="team-prog">Génie Mécanique</span>
-                            </div>
-                        </div>
-                        <div class="team-container">
-                            <div class="team-card wide">
-                                <div class="team-photo">
-                                    <img src="assets/media/team/team.jpg" />
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -1500,7 +1434,7 @@
     </main>
     <div id="gallery-modal-background">
         <div id="gallery-modal-content">
-            <div class="lds-ring">
+            <div class="spinner">
                 <div></div>
                 <div></div>
                 <div></div>

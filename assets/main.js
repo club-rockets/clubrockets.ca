@@ -52,6 +52,26 @@ $(function () {
 
     /* lol copyright */
     $('#currentyear').text((new Date()).getFullYear());
+
+    $('header a[href*="#"').click(function(event) {
+        var target = $(this.hash);
+        event.preventDefault();
+        console.log(target);
+        console.log("" + target.offset().top + " - " + $('header').height() + " = " + (target.offset().top - $('header').height()));
+        $('main').scrollTop($('main').scrollTop() + target.offset().top - $('header').height());
+        
+    })
 });
 
 
+function scroller() {
+    var height = $(window).height();
+    if ($('main').scrollTop() > height - $('header').height()) {
+        $('header').addClass('scrolled');
+    }
+    else {
+        $('header').removeClass('scrolled');
+    }
+    var progress = 100 * ($('main').scrollTop() / ($('main')[0].scrollHeight - height))
+    $('#progress').css({'width': progress + '%'});
+}

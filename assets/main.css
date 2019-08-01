@@ -27,7 +27,7 @@ html, body {
     margin: 0;;
 }
 
-#content-container {
+.content-container {
     background: white;
     z-index: 1;
     padding-top: 1em;
@@ -39,7 +39,7 @@ html, body {
 }
 
 section:not(:first-of-type) {
-    padding-bottom: 3rem;
+    padding-bottom: 4em;
 }
 
 section h2 {
@@ -122,14 +122,21 @@ main {
 
 .parallax-spacer {
     height: 50vh;
+    
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.16), inset 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.parallax-spacer#first {
+    background-image: url('media/hero/spacer_1.jpg');
+}
+
+.parallax-spacer#second {
+    background-image: url('media/hero/spacer_2.jpg');
 }
 
 #hero  {
     height: 100vh;
-}
-
-.parallax-base {
-    transform: translateZ(0);
 }
 
 .parallax-back {
@@ -153,7 +160,7 @@ main {
     text-align: center;
 }
 #title h1 span.logo-red {
-    color: #7C1807;
+    color: #E91E24;
 }
 
 @media only screen and (min-width: 1600px) {
@@ -335,7 +342,7 @@ main {
     width: 100%;
     height: 100%;
     z-index: 1000;
-    background: rgba(0,0,0,0.50);
+    background: radial-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.75));
     overflow: auto;
 }
 
@@ -396,7 +403,6 @@ main {
     flex-direction: row;
     align-content: center;
     justify-content: center;
-    background: #404040;
 }
 
 .rocket-tab-content.tab-active {

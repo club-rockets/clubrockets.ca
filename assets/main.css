@@ -416,36 +416,19 @@ video#hero-vid {
         width: 400px;
         margin-left: auto;
         margin-right: auto;
+        overflow-x: scroll;
     }
 
     #rocket-switch-side {
         display: block;
     }
 
-    .rocket-tab-content.rocket-left-focus .rocket-column.rocket-left {
-        left: 1em;
-        transform: none;
-    }
-
     .rocket-tab-content.rocket-left-focus .rocket-column.rocket-right {
         display: none;
     }
 
-    .rocket-tab-content.rocket-left-focus .rocket-render img {
-        margin-right: 0;
-    }
-
     .rocket-tab-content.rocket-right-focus .rocket-column.rocket-left {
         display: none;
-    }
-
-    .rocket-tab-content.rocket-right-focus .rocket-column.rocket-right {
-        left: 20%;
-        transform: none;
-    }
-
-    .rocket-tab-content.rocket-right-focus .rocket-render img {
-        margin-left: 0;
     }
 }
 

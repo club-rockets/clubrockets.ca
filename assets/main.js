@@ -1,3 +1,4 @@
+/* Copyright (c) 2019 Club RockÉTS (MIT License) */
 $(function () {
     /* Rocket tabs */
     $('.rocket-tab-link').each(function (index, element) {

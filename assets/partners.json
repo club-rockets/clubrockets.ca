@@ -1,0 +1,136 @@
+{
+    "partners": {
+        "commandants": [
+            {
+                "name": "École de Technologie Supérieure",
+                "url": "https://etsmtl.ca",
+                "logo": "ets.png"
+            },
+            {
+                "name": "Fusia",
+                "url": "https://www.fusia.fr",
+                "logo": "fusia.jpg"
+            }
+        ],
+        "pilotes": [
+            {
+                "name": "CFP des Moulins",
+                "url": "http://www.cfpmoulins.qc.ca",
+                "logo": "cfp.svg"
+            }
+        ],
+        "specialistes": [
+            {
+                "name": "Association Étudiantes de l'ÉTS",
+                "url": "https://aeets.com",
+                "logo": "aeets.svg"
+            },
+            {
+                "name": "AON3D",
+                "url": "https://aon3d.com",
+                "logo": "aon3d.png"
+            },
+            {
+                "name": "Club Québecois de Fuséonautique",
+                "url": "http://clubqf.ca",
+                "logo": "cqf.png"
+            },
+            {
+                "name": "Fond de Développement de l'ÉTS",
+                "url": "https://www.etsmtl.ca/fdets/Accueil",
+                "logo": "fdets.png"
+            },
+            {
+                "name": "Pratt & Whitney Canada",
+                "url": "https://www.pwc.ca",
+                "logo": "pratt.png"
+            },
+            {
+                "name": "Swagelok",
+                "url": "https://www.swagelok.com/",
+                "logo": "swagelok.png"
+            }
+        ],
+        "ingenieurs": [
+            {
+                "name": "Altium",
+                "url": "https://www.altium.com/",
+                "logo": "altium.jpg"
+            },
+            {
+                "name": "ANSYS",
+                "url": "https://www.ansys.com/",
+                "logo": "ansys.png"
+            },
+            {
+                "url": "https://fr.bellflight.com/",
+                "logo": "bellhelicopter.png",
+                "name": "Bell Helicoptère"
+            },
+            {
+                "url": "https://www.bombardier.com/",
+                "logo": "bombardier.jpg",
+                "name": "Bombardier Aéronautique"
+            },
+            {
+                "url": "https://www.imcousa.com/",
+                "logo": "imco.png",
+                "name": "IMCO"
+            },
+            {
+                "url": "https://www.loopsin.com/",
+                "logo": "loopsin.jpg",
+                "name": "Loopsin"
+            },
+            {
+                "url": "https://us.misumi-ec.com/",
+                "logo": "misumi.png",
+                "name": "Misumi USA"
+            },
+            {
+                "url": "https://www.solidworks.com/",
+                "logo": "solidworks.png",
+                "name": "Solidworks"
+            },
+            {
+                "url": "https://www.valispace.com/",
+                "logo": "valispace.png",
+                "name": "Valispace"
+            },
+            {
+                "url": "https://www.weidmuller.com/",
+                "logo": "weidmuller.png",
+                "name": "Weidmüller"
+            },
+            {
+                "url": "https://www.xsens.com/",
+                "logo": "xsens.svg",
+                "name": "XSens"
+            }
+        ],
+        "astronautes": [
+            {
+                "name": "CRIAQ",
+                "url": "http://www.criaq.aero",
+                "logo": "criaq.png"
+            },
+            {
+                "name": "Nanuk",
+                "url": "https://www.nanuk.com/",
+                "logo": "nanuk.png"
+            },
+            {
+                "name": "Regal",
+                "url": "https://www.regalcandy.com/",
+                "logo": "regal.png"
+            }
+        ],
+        "experts": [
+            {
+                "url": "https://www.jitlaser.com/",
+                "logo": "jit.jpg",
+                "name": "JIT Laser"
+            }
+        ]
+    }
+}

@@ -76,3 +76,31 @@ function scroller() {
     var progress = 100 * ($('main').scrollTop() / ($('main')[0].scrollHeight - height))
     $('#progress').css({'width': progress + '%'});
 }
+
+var partners = new Vue({
+    el: '#partners',
+    data: {
+        partners: {
+            commandants: [],
+            pilotes: [],
+            specialistes: [],
+            ingenieurs: [],
+            astronautes: [],
+            experts: []
+        }
+    },
+
+    mounted() {
+        this.fetchState()
+    },
+
+    methods: {
+        fetchState: function(){ 
+            axios.get('/assets/partners.json').then(response => {
+                this.partners = response.data.partners
+            }).catch(error => {
+                console.log('error', error.response.data)
+            });
+        },
+    }
+})

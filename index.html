@@ -10,12 +10,14 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/main.css" />
-    <script src="assets/main.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="/assets/main.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js"></script>
 </head>
 
 <body>
-    <header id="#header">
+    <header id="header">
         <div id="navigation">
             <ul>
                 <li><a href="#home">ACCUEIL</a></li>
@@ -39,9 +41,9 @@
         </div>
         <div id="progress"></div>
     </header>
-    <video class="visible-desktop" id="hero-vid" poster="assets/media/hero/frame.jpg" autoplay loop muted>
-        <source type="video/webm" src="assets/media/hero/ookpik.webm" />
-        <source type="video/mp4" src="assets/media/hero/ookpik.mp4" />
+    <video class="visible-desktop" id="hero-vid" poster="/assets/media/hero/frame.jpg" autoplay loop muted>
+        <source type="video/webm" src="/assets/media/hero/ookpik.webm" />
+        <source type="video/mp4" src="/assets/media/hero/ookpik.mp4" />
     </video>
     <main onscroll="scroller()">
         <div id="home">
@@ -92,7 +94,7 @@
                     </div>
                     <div class="gallery-container">
                         <div class="gallery-image"
-                            style="background-image: url(assets/media/gallery/IMG_0005_thumb.jpg)">
+                            style="background-image: url(/assets/media/gallery/IMG_0005_thumb.jpg)">
                             <div class="gallery-overlay">
                                 <div class="gallery-overlay-text">
                                     <span class="gallery-title">Ookpik</span><br />
@@ -102,7 +104,7 @@
 
                         </div>
                         <div class="gallery-image"
-                            style="background-image: url(assets/media/gallery/IMG_7346_thumb.jpg)">
+                            style="background-image: url(/assets/media/gallery/IMG_7346_thumb.jpg)">
                             <div class="gallery-overlay">
                                 <div class="gallery-overlay-text">
                                     <span class="gallery-title">Émerillon V</span><br />
@@ -111,7 +113,7 @@
                             </div>
                         </div>
                         <div class="gallery-image double"
-                            style="background-image: url(assets/media/gallery/IMG_4301_thumb.jpg)">
+                            style="background-image: url(/assets/media/gallery/IMG_4301_thumb.jpg)">
                             <div class="gallery-overlay">
                                 <div class="gallery-overlay-text">
                                     <span class="gallery-title">Équipe de compétition 2018</span><br />
@@ -120,7 +122,7 @@
                             </div>
                         </div>
                         <div class="gallery-image"
-                            style="background-image: url(assets/media/gallery/DSC_8249_thumb.jpg)">
+                            style="background-image: url(/assets/media/gallery/DSC_8249_thumb.jpg)">
                             <div class="gallery-overlay">
                                 <div class="gallery-overlay-text">
                                     <span class="gallery-title">Hyperion</span><br />
@@ -129,7 +131,7 @@
                             </div>
                         </div>
                         <div class="gallery-image"
-                            style="background-image: url(assets/media/gallery/IMG_0001_thumb.jpg)">
+                            style="background-image: url(/assets/media/gallery/IMG_0001_thumb.jpg)">
                             <div class="gallery-overlay">
                                 <div class="gallery-overlay-text">
                                     <span class="gallery-title">Amarok</span><br />
@@ -138,7 +140,7 @@
                             </div>
                         </div>
                         <div class="gallery-image double"
-                            style="background-image: url(assets/media/gallery/IMG_8049_thumb.jpg)">
+                            style="background-image: url(/assets/media/gallery/IMG_8049_thumb.jpg)">
                             <div class="gallery-overlay">
                                 <div class="gallery-overlay-text">
                                     <span class="gallery-title">Amarok II</span><br />
@@ -148,7 +150,7 @@
                             </div>
                         </div>
                         <div class="gallery-image"
-                            style="background-image: url(assets/media/gallery/DSC_0203_thumb.jpg)">
+                            style="background-image: url(/assets/media/gallery/DSC_0203_thumb.jpg)">
                             <div class="gallery-overlay">
                                 <div class="gallery-overlay-text">
                                     <span class="gallery-title">Amarok II</span><br />
@@ -157,7 +159,7 @@
                             </div>
                         </div>
                         <div class="gallery-image"
-                            style="background-image: url(assets/media/gallery/DSC_1968_thumb.jpg)">
+                            style="background-image: url(/assets/media/gallery/DSC_1968_thumb.jpg)">
                             <div class="gallery-overlay">
                                 <div class="gallery-overlay-text">
                                     <span class="gallery-title">Hypérion</span><br />
@@ -166,7 +168,7 @@
                             </div>
                         </div>
                         <div class="gallery-image double"
-                            style="background-image: url(assets/media/gallery/IMG_1030_thumb.jpg)">
+                            style="background-image: url(/assets/media/gallery/IMG_1030_thumb.jpg)">
                             <div class="gallery-overlay">
                                 <div class="gallery-overlay-text">
                                     <span class="gallery-title">Amarok III & Ookpik</span><br />
@@ -175,7 +177,7 @@
                             </div>
                         </div>
                         <div class="gallery-image"
-                            style="background-image: url(assets/media/gallery/IMG_4565_thumb.jpg)">
+                            style="background-image: url(/assets/media/gallery/IMG_4565_thumb.jpg)">
                             <div class="gallery-overlay">
                                 <div class="gallery-overlay-text">
                                     <span class="gallery-title"></span><br />
@@ -184,7 +186,7 @@
                             </div>
                         </div>
                         <div class="gallery-image"
-                            style="background-image: url(assets/media/gallery/IMG_7357_thumb.jpg)">
+                            style="background-image: url(/assets/media/gallery/IMG_7357_thumb.jpg)">
                             <div class="gallery-overlay">
                                 <div class="gallery-overlay-text">
                                     <span class="gallery-title">Émerillon V</span><br />
@@ -194,7 +196,7 @@
                             </div>
                         </div>
                         <div class="gallery-image double"
-                            style="background-image: url(assets/media/gallery/IMG_7356_thumb.jpg)">
+                            style="background-image: url(/assets/media/gallery/IMG_7356_thumb.jpg)">
                             <div class="gallery-overlay">
                                 <div class="gallery-overlay-text">
                                     <span class="gallery-title">Émerillon V</span><br />
@@ -204,7 +206,7 @@
                             </div>
                         </div>
                         <div class="gallery-image"
-                            style="background-image: url(assets/media/gallery/ESA_0007_thumb.jpg)">
+                            style="background-image: url(/assets/media/gallery/ESA_0007_thumb.jpg)">
                             <div class="gallery-overlay">
                                 <div class="gallery-overlay-text">
                                     <span class="gallery-title"></span><br />
@@ -213,7 +215,7 @@
                             </div>
                         </div>
                         <div class="gallery-image"
-                            style="background-image: url(assets/media/gallery/IMG_0005_thumb.jpg)">
+                            style="background-image: url(/assets/media/gallery/IMG_0005_thumb.jpg)">
                             <div class="gallery-overlay">
                                 <div class="gallery-overlay-text">
                                     <span class="gallery-title">Ookpik</span><br />
@@ -379,7 +381,7 @@
                                     </div>
                                 </div>
                                 <div class="rocket-render">
-                                    <img src="assets/media/rockets/amarok2.png">
+                                    <img src="/assets/media/rockets/amarok2.png">
                                 </div>
                                 <div class="rocket-column rocket-right">
                                     <div class="rocket-info rocket-right rocket-nose">
@@ -620,7 +622,7 @@
                                     </div>
                                 </div>
                                 <div class="rocket-render">
-                                    <img src="assets/media/rockets/amarok3.png">
+                                    <img src="/assets/media/rockets/amarok3.png">
                                 </div>
                                 <div class="rocket-column rocket-right">
 
@@ -858,7 +860,7 @@
                                     </div>
                                 </div>
                                 <div class="rocket-render">
-                                    <img src="assets/media/rockets/ookpik.png">
+                                    <img src="/assets/media/rockets/ookpik.png">
                                 </div>
                                 <div class="rocket-column rocket-right">
                                     <div class="rocket-info rocket-right rocket-nose">
@@ -1085,7 +1087,7 @@
                                     </div>
                                 </div>
                                 <div class="rocket-render">
-                                    <img src="assets/media/rockets/aarluk.png">
+                                    <img src="/assets/media/rockets/aarluk.png">
                                 </div>
                                 <div class="rocket-column rocket-right">
                                     <div class="rocket-info rocket-right rocket-nose">
@@ -1251,140 +1253,48 @@
                         <h2>Merci à tous nos partenaires</h2>
                         <h3>Commandants</h3>
                         <div class="partners-commandant">
-                            <div class="partner-logo">
-                                <a href="https://etsmtl.ca/">
-                                    <img src="assets/media/partners/ets.png" alt="École de Technologie Supérieure">
-                                </a>
-                            </div>
-                            <div class="partner-logo">
-                                <a href="https://www.fusia.fr/">
-                                    <img src="assets/media/partners/fusia.jpg" alt="Impression Métal Fusia">
+                            <div class="partner-logo" v-for="partner in partners.commandants">
+                                <a :href="partner.url">
+                                    <img :src="'/assets/media/partners/' + partner.logo" :alt="partner.name">
                                 </a>
                             </div>
                         </div>
-                        <h3>Pilote</h3>
+                        <h3>Pilotes</h3>
                         <div class="partners-pilote">
-                            <div class="partner-logo">
-                                <a href="http://www.cfpmoulins.qc.ca/">
-                                    <img src="assets/media/partners/cfp.svg" alt="CFP des Moulins">
+                            <div class="partner-logo" v-for="partner in partners.pilotes">
+                                <a :href="partner.url">
+                                    <img :src="'/assets/media/partners/' + partner.logo" :alt="partner.name">
                                 </a>
                             </div>
-                        </div>
                         <h3>Spécialistes</h3>
                         <div class="partners-specialiste">
-                            <div class="partner-logo">
-                                <a href="https://aeets.com/">
-                                    <img src="assets/media/partners/aeets.svg" alt="Association Étudiante de l'ÉTS">
-                                </a>
-                            </div>
-                            <div class="partner-logo">
-                                <a href="https://aon3d.com/">
-                                    <img src="assets/media/partners/aon3d.png" alt="AON3D">
-                                </a>
-                            </div>
-                            <div class="partner-logo">
-                                <a href="http://www.clubqf.ca/">
-                                    <img src="assets/media/partners/cqf.png" alt="Club Québécois de Fuséonautique">
-                                </a>
-                            </div>
-                            <div class="partner-logo">
-                                <a href="https://www.etsmtl.ca/fdets/Accueil">
-                                    <img src="assets/media/partners/fdets.png" alt="Fond de Développement de l'ÉTS">
-                                </a>
-                            </div>
-                            <div class="partner-logo">
-                                <a href="https://www.pwc.ca/">
-                                    <img src="assets/media/partners/pratt.png" alt="Pratt & Whitney Canada">
-                                </a>
-                            </div>
-                            <div class="partner-logo">
-                                <a href="https://www.swagelok.com/en">
-                                    <img src="assets/media/partners/swagelok.png" alt="Swagelok">
+                            <div class="partner-logo" v-for="partner in partners.specialistes">
+                                <a :href="partner.url">
+                                    <img :src="'/assets/media/partners/' + partner.logo" :alt="partner.name">
                                 </a>
                             </div>
                         </div>
                         <h3>Ingénieurs</h3>
                         <div class="partners-ingenieur">
-                            <div class="partner-logo">
-                                <a href="https://www.altium.com/">
-                                    <img src="assets/media/partners/altium.jpg" alt="Altium">
-                                </a>
-                            </div>
-                            <div class="partner-logo">
-                                <a href="https://www.ansys.com/">
-                                    <img src="assets/media/partners/ansys.png" alt="ANSYS">
-                                </a>
-                            </div>
-                            <div class="partner-logo">
-                                <a href="https://fr.bellflight.com/">
-                                    <img src="assets/media/partners/bellhelicopter.png" alt="Bell Helicoptère">
-                                </a>
-                            </div>
-                            <div class="partner-logo">
-                                <a href="https://www.bombardier.com/">
-                                    <img src="assets/media/partners/bombardier.jpg" alt="Bombardier Aéronautique">
-                                </a>
-                            </div>
-                            <div class="partner-logo">
-                                <a href="https://www.imcousa.com/">
-                                    <img src="assets/media/partners/imco.png" alt="IMCO">
-                                </a>
-                            </div>
-                            <div class="partner-logo">
-                                <a href="https://www.loopsin.com/">
-                                    <img src="assets/media/partners/loopsin.jpg" alt="Loopsin">
-                                </a>
-                            </div>
-                            <div class="partner-logo">
-                                <a href="https://us.misumi-ec.com/">
-                                    <img src="assets/media/partners/misumi.png" alt="Misumi USA">
-                                </a>
-                            </div>
-                            <div class="partner-logo">
-                                <a href="https://www.solidworks.com/">
-                                    <img src="assets/media/partners/solidworks.png" alt="Solidworks">
-                                </a>
-                            </div>
-                            <div class="partner-logo">
-                                <a href="https://www.valispace.com/">
-                                    <img src="assets/media/partners/valispace.png" alt="Valispace">
-                                </a>
-                            </div>
-                            <div class="partner-logo">
-                                <a href="https://www.weidmuller.com/">
-                                    <img src="assets/media/partners/weidmuller.png" alt="Weidmüller">
-                                </a>
-                            </div>
-                            <div class="partner-logo">
-                                <a href="https://www.xsens.com/">
-                                    <img src="assets/media/partners/xsens.svg" alt="XSens">
+                            <div class="partner-logo" v-for="partner in partners.ingenieurs">
+                                <a :href="partner.url">
+                                    <img :src="'/assets/media/partners/' + partner.logo" :alt="partner.name">
                                 </a>
                             </div>
                         </div>
                         <h3>Astronautes</h3>
                         <div class="partners-astronaute">
-                            <div class="partner-logo">
-                                <a href="http://www.criaq.aero/">
-                                    <img src="assets/media/partners/criaq.png" alt="CRIAQ">
+                            <div class="partner-logo" v-for="partner in partners.astronautes">
+                                <a :href="partner.url">
+                                    <img :src="'/assets/media/partners/' + partner.logo" :alt="partner.name">
                                 </a>
                             </div>
-                            <div class="partner-logo">
-                                <a href="https://www.nanuk.com/?lang=lang-fr">
-                                    <img src="assets/media/partners/nanuk.png" alt="Nanuk">
-                                </a>
-                            </div>
-                            <div class="partner-logo">
-                                <a href="https://www.regalcandy.com/">
-                                    <img src="assets/media/partners/regal.png" alt="Regal">
-                                </a>
-                            </div>
-
                         </div>
-                        <h3>Expert</h3>
+                        <h3>Experts</h3>
                         <div class="partners-expert">
-                            <div class="partner-logo">
-                                <a href="https://www.jitlaser.com/">
-                                    <img src="assets/media/partners/jit.jpg" alt="JIT Laser">
+                            <div class="partner-logo" v-for="partner in partners.experts">
+                                <a :href="partner.url">
+                                    <img :src="'/assets/media/partners/' + partner.logo" :alt="partner.name">
                                 </a>
                             </div>
                         </div>
@@ -1397,27 +1307,27 @@
                         <div class="social-container">
                             <div class="social-network">
                                 <a href="https://www.facebook.com/clubrockets/">
-                                    <img src="assets/media/social/facebook.svg">
+                                    <img src="/assets/media/social/facebook.svg">
                                 </a>
                             </div>
                             <div class="social-network">
                                 <a href="https://www.instagram.com/clubrockets/">
-                                    <img src="assets/media/social/insta.png">
+                                    <img src="/assets/media/social/insta.png">
                                 </a>
                             </div>
                             <div class="social-network">
                                 <a href="https://ca.linkedin.com/company/rockets">
-                                    <img src="assets/media/social/linkedin.png">
+                                    <img src="/assets/media/social/linkedin.png">
                                 </a>
                             </div>
                             <div class="social-network">
                                 <a href="https://www.youtube.com/channel/UChCSLkzgBhRTVGqWTRvXS3A">
-                                    <img src="assets/media/social/youtube.png">
+                                    <img src="/assets/media/social/youtube.png">
                                 </a>
                             </div>
                             <div class="social-network">
                                 <a href="https://github.com/club-rockets/">
-                                    <img src="assets/media/social/github.png">
+                                    <img src="/assets/media/social/github.png">
                                 </a>
                             </div>
                         </div>
@@ -1451,10 +1361,11 @@
                 <div></div>
                 <div></div>
             </div>
-            <img src="assets/media/gallery/IMG_0005_thumb.jpg">
+            <img src="/assets/media/gallery/IMG_0005_thumb.jpg">
         </div>
     </div>
 
+    <script src="/assets/main.js"></script>
 </body>
 
 </html>

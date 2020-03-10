@@ -11,7 +11,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <link rel="stylesheet" type="text/css" media="screen" href="/assets/main.css" />
-    <script src="/assets/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js"></script>
 </head>
 
 <body>
@@ -1241,149 +1242,58 @@
                 </section>
             </div>
             <div id="second" class="parallax-spacer"></div>
-            <div class="content-container" <section id="partners">
-                <div class="content">
-                    <h2>Thanks to all of our partners</h2>
-                    <h3>Commanders</h3>
-                    <div class="partners-commandant">
-                        <div class="partner-logo">
-                            <a href="https://etsmtl.ca/">
-                                <img src="/assets/media/partners/ets.png" alt="École de Technologie Supérieure">
-                            </a>
+            <div class="content-container">
+                <section id="partners">
+                    <div class="content">
+                        <h2>Thanks to all of our partners</h2>
+                        <h3>Commanders</h3>
+                        <div class="partners-commandant">
+                            <div class="partner-logo" v-for="partner in partners.commandants">
+                                <a :href="partner.url">
+                                    <img :src="'/assets/media/partners/' + partner.logo" :alt="partner.name">
+                                </a>
+                            </div>
                         </div>
-                        <div class="partner-logo">
-                            <a href="https://www.fusia.fr/">
-                                <img src="/assets/media/partners/fusia.jpg" alt="Impression Métal Fusia">
-                            </a>
+                        <h3>Pilots</h3>
+                        <div class="partners-pilote">
+                            <div class="partner-logo" v-for="partner in partners.pilotes">
+                                <a :href="partner.url">
+                                    <img :src="'/assets/media/partners/' + partner.logo" :alt="partner.name">
+                                </a>
+                            </div>
+                        <h3>Specialists</h3>
+                        <div class="partners-specialiste">
+                            <div class="partner-logo" v-for="partner in partners.specialistes">
+                                <a :href="partner.url">
+                                    <img :src="'/assets/media/partners/' + partner.logo" :alt="partner.name">
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    <h3>Pilot</h3>
-                    <div class="partners-pilote">
-                        <div class="partner-logo">
-                            <a href="http://www.cfpmoulins.qc.ca/">
-                                <img src="/assets/media/partners/cfp.svg" alt="CFP des Moulins">
-                            </a>
+                        <h3>Engineers</h3>
+                        <div class="partners-ingenieur">
+                            <div class="partner-logo" v-for="partner in partners.ingenieurs">
+                                <a :href="partner.url">
+                                    <img :src="'/assets/media/partners/' + partner.logo" :alt="partner.name">
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    <h3>Specialists</h3>
-                    <div class="partners-specialiste">
-                        <div class="partner-logo">
-                            <a href="https://aeets.com/">
-                                <img src="/assets/media/partners/aeets.svg" alt="Association Étudiante de l'ÉTS">
-                            </a>
+                        <h3>Astronauts</h3>
+                        <div class="partners-astronaute">
+                            <div class="partner-logo" v-for="partner in partners.astronautes">
+                                <a :href="partner.url">
+                                    <img :src="'/assets/media/partners/' + partner.logo" :alt="partner.name">
+                                </a>
+                            </div>
                         </div>
-                        <div class="partner-logo">
-                            <a href="https://aon3d.com/">
-                                <img src="/assets/media/partners/aon3d.png" alt="AON3D">
-                            </a>
-                        </div>
-                        <div class="partner-logo">
-                            <a href="http://www.clubqf.ca/">
-                                <img src="/assets/media/partners/cqf.png" alt="Club Québécois de Fuséonautique">
-                            </a>
-                        </div>
-                        <div class="partner-logo">
-                            <a href="https://www.etsmtl.ca/fdets/Accueil">
-                                <img src="/assets/media/partners/fdets.png" alt="Fond de Développement de l'ÉTS">
-                            </a>
-                        </div>
-                        <div class="partner-logo">
-                            <a href="https://www.pwc.ca/">
-                                <img src="/assets/media/partners/pratt.png" alt="Pratt & Whitney Canada">
-                            </a>
-                        </div>
-                        <div class="partner-logo">
-                            <a href="https://www.swagelok.com/en">
-                                <img src="/assets/media/partners/swagelok.png" alt="Swagelok">
-                            </a>
+                        <h3>Experts</h3>
+                        <div class="partners-expert">
+                            <div class="partner-logo" v-for="partner in partners.experts">
+                                <a :href="partner.url">
+                                    <img :src="'/assets/media/partners/' + partner.logo" :alt="partner.name">
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <h3>Engineers</h3>
-                    <div class="partners-ingenieur">
-                        <div class="partner-logo">
-                            <a href="https://www.altium.com/">
-                                <img src="/assets/media/partners/altium.jpg" alt="Altium">
-                            </a>
-                        </div>
-                        <div class="partner-logo">
-                            <a href="https://www.ansys.com/">
-                                <img src="/assets/media/partners/ansys.png" alt="ANSYS">
-                            </a>
-                        </div>
-                        <div class="partner-logo">
-                            <a href="https://bellflight.com/">
-                                <img src="/assets/media/partners/bellhelicopter.png" alt="Bell Helicopter">
-                            </a>
-                        </div>
-                        <div class="partner-logo">
-                            <a href="https://www.bombardier.com/">
-                                <img src="/assets/media/partners/bombardier.jpg" alt="Bombardier Aéronautique">
-                            </a>
-                        </div>
-                        <div class="partner-logo">
-                            <a href="https://www.imcousa.com/">
-                                <img src="/assets/media/partners/imco.png" alt="IMCO">
-                            </a>
-                        </div>
-                        <div class="partner-logo">
-                            <a href="https://www.loopsin.com/loopsin-homepage">
-                                <img src="/assets/media/partners/loopsin.jpg" alt="Loopsin">
-                            </a>
-                        </div>
-                        <div class="partner-logo">
-                            <a href="https://us.misumi-ec.com/">
-                                <img src="/assets/media/partners/misumi.png" alt="Misumi USA">
-                            </a>
-                        </div>
-                        <div class="partner-logo">
-                            <a href="https://www.solidworks.com/">
-                                <img src="/assets/media/partners/solidworks.png" alt="Solidworks">
-                            </a>
-                        </div>
-                        <div class="partner-logo">
-                            <a href="https://www.valispace.com/">
-                                <img src="/assets/media/partners/valispace.png" alt="Valispace">
-                            </a>
-                        </div>
-                        <div class="partner-logo">
-                            <a href="https://www.weidmuller.com/">
-                                <img src="/assets/media/partners/weidmuller.png" alt="Weidmüller">
-                            </a>
-                        </div>
-                        <div class="partner-logo">
-                            <a href="https://www.xsens.com/">
-                                <img src="/assets/media/partners/xsens.svg" alt="XSens">
-                            </a>
-                        </div>
-                    </div>
-                    <h3>Astronauts</h3>
-                    <div class="partners-astronaute">
-                        <div class="partner-logo">
-                            <a href="http://www.criaq.aero/">
-                                <img src="/assets/media/partners/criaq.png" alt="CRIAQ">
-                            </a>
-                        </div>
-                        <div class="partner-logo">
-                            <a href="https://www.nanuk.com/?lang=lang-fr">
-                                <img src="/assets/media/partners/nanuk.png" alt="Nanuk">
-                            </a>
-                        </div>
-                        <div class="partner-logo">
-                            <a href="https://www.regalcandy.com/">
-                                <img src="/assets/media/partners/regal.png" alt="Regal">
-                            </a>
-                        </div>
-
-                    </div>
-                    <h3>Expert</h3>
-                    <div class="partners-expert">
-                        <div class="partner-logo">
-                            <a href="https://www.jitlaser.com/">
-                                <img src="/assets/media/partners/jit.jpg" alt="JIT Laser">
-                            </a>
-                        </div>
-                    </div>
-                </div>
                 </section>
 
                 <section id="contact">
@@ -1449,6 +1359,8 @@
             <img src="/assets/media/gallery/IMG_0005_thumb.jpg">
         </div>
     </div>
+
+    <script src="/assets/main.js"></script>
 </body>
 
 </html>

@@ -2,11 +2,6 @@
     "partners": {
         "commandants": [
             {
-                "name": "École de Technologie Supérieure",
-                "url": "https://etsmtl.ca",
-                "logo": "ets.png"
-            },
-            {
                 "name": "Fusia",
                 "url": "https://www.fusia.fr",
                 "logo": "fusia.jpg"

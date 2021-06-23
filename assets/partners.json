@@ -12,6 +12,11 @@
                 "name": "CFP des Moulins",
                 "url": "http://www.cfpmoulins.qc.ca",
                 "logo": "cfp.svg"
+            },
+            {
+                "name": "Solvay",
+                "url": "https://www.solvay.com/en/",
+                "logo": "solvay.svg"
             }
         ],
         "specialistes": [
@@ -53,11 +58,6 @@
                 "logo": "altium.jpg"
             },
             {
-                "name": "ANSYS",
-                "url": "https://www.ansys.com/",
-                "logo": "ansys.png"
-            },
-            {
                 "url": "https://fr.bellflight.com/",
                 "logo": "bellhelicopter.png",
                 "name": "Bell Helicoptère"
@@ -88,11 +88,6 @@
                 "name": "Solidworks"
             },
             {
-                "url": "https://www.valispace.com/",
-                "logo": "valispace.png",
-                "name": "Valispace"
-            },
-            {
                 "url": "https://www.weidmuller.com/",
                 "logo": "weidmuller.png",
                 "name": "Weidmüller"
@@ -110,6 +105,11 @@
                 "logo": "criaq.png"
             },
             {
+                "name": "Cégep de Jonquière",
+                "url": "https://www.cegepjonquiere.ca/",
+                "logo": "jonquière.jpg"
+            },
+            {
                 "name": "Nanuk",
                 "url": "https://www.nanuk.com/",
                 "logo": "nanuk.png"
@@ -118,13 +118,18 @@
                 "name": "Regal",
                 "url": "https://www.regalcandy.com/",
                 "logo": "regal.png"
+            },
+            {
+                "url": "https://www.valispace.com/",
+                "logo": "valispace.png",
+                "name": "Valispace"
             }
         ],
         "experts": [
             {
-                "url": "https://www.jitlaser.com/",
-                "logo": "jit.jpg",
-                "name": "JIT Laser"
+                "name": "Madcow Rocketry",
+                "url": "https://www.madcowrocketry.com/",
+                "logo": "madcow.png"
             }
         ]
     }

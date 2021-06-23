@@ -1,4 +1,4 @@
-/* Copyright (c) 2019 Club RockÉTS (MIT License) */
+/* Copyright (c) 2021 Club RockÉTS (MIT License) */
 $(function () {
     /* Rocket tabs */
     $('.rocket-tab-link').each(function (index, element) {
@@ -31,24 +31,14 @@ $(function () {
                 $(this).addClass('rocket-right-focus');
             }
             else {
-                $(this).removeClass('rocket-right-focus');
+                    $(this).removeClass('rocket-right-focus');
                 $(this).addClass('rocket-left-focus');
             }
         });
     });
 
-    /* Gallery modal */
     $("#gallery-modal-content").on('click', function (event) {
         $("#gallery-modal-background").css('display', 'none');
-    });
-    
-    $('.gallery-image').on('click', function (event) {
-        url = $(this).css('background-image');
-        url = /^url\(['"]?([^"]*)['"]?\)$/.exec(url)[1];
-        url = url.replace("_thumb", "");
-        $("#gallery-modal-content img").attr("src", url).one("load", function() {
-            $("#gallery-modal-background").css('display', 'block');
-        });
     });
 
     /* lol copyright */
@@ -77,6 +67,35 @@ function scroller() {
     $('#progress').css({'width': progress + '%'});
 }
 
+var gallery = new Vue({
+    el: '#gallery',
+    data: {
+        gallery: []
+    },
+
+    mounted() {
+        this.fetchState()
+    },
+
+    methods: {
+        showImage: function(id) {
+            var img = document.getElementById('gallery-modal-content')
+                              .getElementsByTagName('img')[0];
+            img.setAttribute('src', '/assets/media/gallery/hires/' + id + '.jpg')
+            img.onload = function () {
+                document.getElementById('gallery-modal-background').style = 'display: block';
+            }
+        },
+        fetchState: function(){ 
+            axios.get('/assets/gallery.json').then(response => {
+                this.gallery = response.data.gallery.reverse()
+            }).catch(error => {
+                console.log('error', error.response.data)
+            });
+        }
+    }
+})
+
 var partners = new Vue({
     el: '#partners',
     data: {
@@ -101,6 +120,6 @@ var partners = new Vue({
             }).catch(error => {
                 console.log('error', error.response.data)
             });
-        },
+        }
     }
 })

@@ -223,12 +223,13 @@ video#hero-vid {
 
 .gallery-overlay-text {
     position: absolute;
-    bottom: 0;
+    border-radius: 1em;
+    bottom: 1em;
     left:50%;
     transform: translate(-50%,0);
-    width: 100%;
+    width: calc(100% - 2em);
     text-align: center;
-    background: rgba(232, 24, 9, 0.75);
+    background: rgba(232, 24, 9);
     padding-top:0.25em;
     padding-bottom:0.25em;
 }
@@ -256,40 +257,44 @@ video#hero-vid {
 }
 
 .gallery-image {
-    height: 20em;
+    background-size: cover;
+    width: calc(100% - 0.1em);
+    height: calc(100% - 0.1em);
+    position: absolute;
+    top: 0.1em;
+    left: 0.1em;
 }
 
-.gallery-image {
-    background-size: cover;
+.gallery-image-container {
+    height: 20em;
     position: relative;
 }
-
 /* Adaptive image-per-row */
-.gallery-image.double {
+.gallery-image-container.double {
     width: calc(100%);
 }
 
-.gallery-image {
+.gallery-image-container {
     width: calc(100%/2);
 }
 
 @media only screen and (min-width: 600px) {
-    .gallery-image.double {
+    .gallery-image-container.double {
         width: calc(100%/2);
     }
 
-    .gallery-image {
+    .gallery-image-container {
         width: calc(100%/4);
     }
 }
 
 
 @media only screen and (min-width: 1200px) {
-    .gallery-image.double {
+    .gallery-image-container.double {
         width: calc(100%/3);
     }
 
-    .gallery-image {
+    .gallery-image-container {
         width: calc(100%/6);
         height: auto;
         padding-top: 25%;

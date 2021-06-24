@@ -87,11 +87,11 @@ main {
 }
 
 .parallax-spacer#first {
-    background-image: url('media/hero/pole_pitch.jpg');
+    background-image: url('media/hero/spacer_1.jpg');
 }
 
 .parallax-spacer#second {
-    background-image: url('media/hero/tripod.jpg');
+    background-image: url('media/hero/spacer_2.jpg');
 }
 
 /*******************************************************************************

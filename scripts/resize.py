@@ -8,7 +8,7 @@ from sys import stderr
 from PIL import Image
 
 
-def resize(path, max_width, max_height, dest):
+def resize(path, max_width, max_height, dest, quality=75):
     try:
         image = Image.open(path)
         wf = max_width / image.width
@@ -21,7 +21,7 @@ def resize(path, max_width, max_height, dest):
                 int(image.height * factor)
             ))
 
-        image.save(os.path.join(dest, os.path.basename(path)))
+        image.save(os.path.join(dest, os.path.basename(path)), quality=quality)
 
     except Exception as e:
         print(f"error: {path}: {str(e)}", file=stderr)
@@ -41,10 +41,11 @@ def main(args):
                 os.path.join(args.source, file),
                 args.width,
                 args.height,
-                args.dest
+                args.dest,
+                args.quality
             )
             count += 1
-        print(f"\033[0GResized {count} images in {time.time() - _start:.2f}s", end='', flush=True)
+        print(f"\033[0GResized {count} images in {time.time() - _start:.2f}s", end='', flush=True) # noqa
     print('')
 
 
@@ -54,4 +55,5 @@ if __name__ == '__main__':
     parser.add_argument('-d', '--dest', help='Destination for resized images', required=True) # noqa
     parser.add_argument('-w', '--width', help='Max width to respect', type=int, required=True) # noqa
     parser.add_argument('-H', '--height', help='Max height to respect', type=int, required=True) # noqa
+    parser.add_argument('-q', '--quality', help='JPEG quality', required=False, type=int, default=75) # noqa
     exit(main(parser.parse_args()) or 0)

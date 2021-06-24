@@ -11,8 +11,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <link rel="stylesheet" type="text/css" media="screen" href="/assets/main.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js"></script>
+    <script src="/assets/vue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
 </head>
 
 <body>
@@ -1137,14 +1137,14 @@
                         <div class="partners-pilote">
                             <div class="partner-logo" v-for="partner in partners.pilotes">
                                 <a :href="partner.url">
-                                    <img :src="'/assets/media/partners/' + partner.logo" :alt="partner.name">
+                                    <img :src="'/assets/media/partners_2/' + partner.logo" :alt="partner.name">
                                 </a>
                             </div>
                         <h3>Specialists</h3>
                         <div class="partners-specialiste">
                             <div class="partner-logo" v-for="partner in partners.specialistes">
                                 <a :href="partner.url">
-                                    <img :src="'/assets/media/partners/' + partner.logo" :alt="partner.name">
+                                    <img :src="'/assets/media/partners_2/' + partner.logo" :alt="partner.name">
                                 </a>
                             </div>
                         </div>
@@ -1152,7 +1152,7 @@
                         <div class="partners-ingenieur">
                             <div class="partner-logo" v-for="partner in partners.ingenieurs">
                                 <a :href="partner.url">
-                                    <img :src="'/assets/media/partners/' + partner.logo" :alt="partner.name">
+                                    <img :src="'/assets/media/partners_2/' + partner.logo" :alt="partner.name">
                                 </a>
                             </div>
                         </div>
@@ -1160,7 +1160,7 @@
                         <div class="partners-astronaute">
                             <div class="partner-logo" v-for="partner in partners.astronautes">
                                 <a :href="partner.url">
-                                    <img :src="'/assets/media/partners/' + partner.logo" :alt="partner.name">
+                                    <img :src="'/assets/media/partners_2/' + partner.logo" :alt="partner.name">
                                 </a>
                             </div>
                         </div>
@@ -1168,7 +1168,7 @@
                         <div class="partners-expert">
                             <div class="partner-logo" v-for="partner in partners.experts">
                                 <a :href="partner.url">
-                                    <img :src="'/assets/media/partners/' + partner.logo" :alt="partner.name">
+                                    <img :src="'/assets/media/partners_2/' + partner.logo" :alt="partner.name">
                                 </a>
                             </div>
                         </div>

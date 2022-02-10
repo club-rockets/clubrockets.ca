@@ -1,0 +1,21 @@
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - uses: webfactory/ssh-agent@v0.5.4
+        with:
+          ssh-private-key: ${{ secrets.RSA_PRIVATE_KEY }}
+
+      - name: Set known host entry
+        run: echo "${{ secrets.KNOWN_HOST_KEY }}" > ~/.ssh/known_hosts
+
+      - name: Upload contents
+        run: scp -r * ${{ secrets.HOST }}:/var/www/html/

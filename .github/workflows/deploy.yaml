@@ -18,4 +18,4 @@ jobs:
         run: echo "${{ secrets.KNOWN_HOST_KEY }}" > ~/.ssh/known_hosts
 
       - name: Upload contents
-        run: scp -r "$(pwd)/*" ${{ secrets.HOST }}:/var/www/html/
+        run: scp -r $(pwd)/* ${{ secrets.HOST }}:/var/www/html/

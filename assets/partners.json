@@ -130,6 +130,11 @@
                 "name": "Madcow Rocketry",
                 "url": "https://www.madcowrocketry.com/",
                 "logo": "madcow.png"
+            },
+            {
+                "name": "Premier Tech",
+                "url": "https://www.premiertech.com/",
+                "logo": "premiertech.svg"
             }
         ]
     }

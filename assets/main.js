@@ -41,9 +41,6 @@ $(function () {
         $("#gallery-modal-background").css('display', 'none');
     });
 
-    /* lol copyright */
-    $('#currentyear').text((new Date()).getFullYear());
-
     $('header a[href*="#"').click(function(event) {
         var target = $(this.hash);
         event.preventDefault();

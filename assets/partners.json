@@ -2,12 +2,29 @@
     "partners": {
         "commandants": [
             {
-                "name": "Fusia",
-                "url": "https://www.fusia.fr",
-                "logo": "fusia.jpg"
+                "name": "Groupe FusiA",
+                "url": "https://www.fusia-groupe.com/",
+                "logo": "fusia.png"
+            },
+            {
+                "name": "Stelia Aerospace",
+                "url": "https://www.stelia-aerospace.com/",
+                "logo": "stelia.png"
             }
         ],
         "pilotes": [
+            {
+                "name": "Club Québecois de Fuséonautique",
+                "url": "http://clubqf.ca",
+                "logo": "cqf.svg"
+            },
+            {
+                "name": "Fondation J. Armand Bombardier",
+                "url": "https://www.fondationbombardier.ca/",
+                "logo": "fondation-jab.svg"
+            }
+        ],
+        "specialistes": [
             {
                 "name": "CFP des Moulins",
                 "url": "http://www.cfpmoulins.qc.ca",
@@ -17,112 +34,65 @@
                 "name": "Solvay",
                 "url": "https://www.solvay.com/en/",
                 "logo": "solvay.svg"
-            }
-        ],
-        "specialistes": [
+            },
             {
                 "name": "Association Étudiantes de l'ÉTS",
                 "url": "https://aeets.com",
                 "logo": "aeets.svg"
             },
             {
-                "name": "AON3D",
-                "url": "https://aon3d.com",
-                "logo": "aon3d.png"
-            },
-            {
-                "name": "Club Québecois de Fuséonautique",
-                "url": "http://clubqf.ca",
-                "logo": "cqf.png"
-            },
-            {
-                "name": "Fond de Développement de l'ÉTS",
-                "url": "https://www.etsmtl.ca/fdets/Accueil",
-                "logo": "fdets.png"
-            },
-            {
-                "name": "Pratt & Whitney Canada",
-                "url": "https://www.pwc.ca",
-                "logo": "pratt.png"
-            },
-            {
                 "name": "Swagelok",
                 "url": "https://www.swagelok.com/",
-                "logo": "swagelok.png"
+                "logo": "swagelok.svg"
             }
         ],
         "ingenieurs": [
             {
                 "name": "Altium",
                 "url": "https://www.altium.com/",
-                "logo": "altium.jpg"
+                "logo": "altium.svg"
             },
             {
+                "name": "Bell Textron",
                 "url": "https://fr.bellflight.com/",
-                "logo": "belltextron.svg",
-                "name": "Bell Textron"
+                "logo": "belltextron.svg"
             },
             {
-                "url": "https://www.bombardier.com/",
-                "logo": "bombardier.jpg",
-                "name": "Bombardier Aéronautique"
+                "name": "Drillmex",
+                "url": "https://www.drillmex.com/",
+                "logo": "drillmex.png"
             },
             {
-                "url": "https://www.imcousa.com/",
-                "logo": "imco.png",
-                "name": "IMCO"
-            },
-            {
-                "url": "https://www.loopsin.com/",
-                "logo": "loopsin.jpg",
-                "name": "Loopsin"
-            },
-            {
-                "url": "https://us.misumi-ec.com/",
-                "logo": "misumi.png",
-                "name": "Misumi USA"
-            },
-            {
+                "name": "Solidworks",
                 "url": "https://www.solidworks.com/",
-                "logo": "solidworks.png",
-                "name": "Solidworks"
+                "logo": "solidworks.svg"
             },
             {
-                "url": "https://www.weidmuller.com/",
-                "logo": "weidmuller.png",
-                "name": "Weidmüller"
+                "name": "Technologie supérieure d'alliages",
+                "url": "https://supalloy.com/",
+                "logo": "tas.png"
             },
             {
+                "name": "XSens",
                 "url": "https://www.xsens.com/",
-                "logo": "xsens.svg",
-                "name": "XSens"
+                "logo": "xsens.svg"
             }
         ],
         "astronautes": [
             {
-                "name": "CRIAQ",
-                "url": "http://www.criaq.aero",
-                "logo": "criaq.png"
+                "name": "Endura Paint",
+                "url": "https://www.endurapaint.com/",
+                "logo": "endurapaint.svg"
             },
             {
-                "name": "Cégep de Jonquière",
-                "url": "https://www.cegepjonquiere.ca/",
-                "logo": "jonquière.jpg"
+                "name": "LabJack",
+                "url": "https://labjack.com/",
+                "logo": "labjack.svg"
             },
             {
-                "name": "Nanuk",
-                "url": "https://www.nanuk.com/",
-                "logo": "nanuk.png"
-            },
-            {
-                "name": "Regal",
-                "url": "https://www.regalcandy.com/",
-                "logo": "regal.png"
-            },
-            {
-                "url": "https://www.valispace.com/",
-                "logo": "valispace.png",
-                "name": "Valispace"
+                "name": "Le Potager du Canal",
+                "url": "https://www.lepotagerducanal.com/",
+                "logo": "potagercanal.svg"
             }
         ],
         "experts": [

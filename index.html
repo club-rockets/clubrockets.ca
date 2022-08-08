@@ -43,7 +43,6 @@
     </header>
     <video class="visible-desktop" id="hero-vid" poster="/assets/media/hero/frame.jpg" autoplay loop muted>
         <source type="video/webm" src="/assets/media/hero/ookpik.webm" />
-        <source type="video/mp4" src="/assets/media/hero/ookpik.mp4" />
     </video>
     <main onscroll="scroller()">
         <div id="home">
@@ -114,8 +113,10 @@
                                     III</span><span class="alt">ᐊᒪᕋᒃ III</span></div>
                             <div class="rocket-tab-link" data-target="ookpik"><span class="latin">Ookpik</span><span
                                     class="alt">ᐅᒃᐱᒃ</span></div>
-                            <div class="rocket-tab-link tab-active" data-target="aarluk"><span
+                            <div class="rocket-tab-link" data-target="aarluk"><span
                                     class="latin">Aarluk</span><span class="alt">ᐋᕐᓗᒃ</span></div>
+                            <div class="rocket-tab-link tab-active" data-target="aarluk-3"><span
+                                class="latin">Aarluk III</span><span class="alt">ᐋᕐᓗᒃ III</span></div>
                         </div>
                     </div>
                     <div class="rocket-tabs-container">
@@ -837,7 +838,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id="rocket-tab-aarluk" class="rocket-tab-content tab-active rocket-left-focus">
+                            <div id="rocket-tab-aarluk" class="rocket-tab-content rocket-left-focus">
                                 <div class="rocket-column rocket-left">
                                     <div class="rocket-info rocket-left rocket-summary">
                                         <h3>Summary</h3>
@@ -1091,6 +1092,262 @@
                                     </div>
                                 </div>
                             </div>
+                            <div id="rocket-tab-aarluk-3" class="rocket-tab-content tab-active rocket-left-focus">
+                                <div class="rocket-column rocket-left">
+                                    <div class="rocket-info rocket-left rocket-summary">
+                                        <h3>Summary</h3>
+                                        <table>
+                                            <tr class="rocket-info-keys">
+                                                <td>Name</td>
+                                                <td>Year</td>
+                                            </tr>
+                                            <tr class="rocket-info-values">
+                                                <td>Aarluk III</td>
+                                                <td>2022</td>
+                                            </tr>
+                                            <tr class="rocket-info-keys">
+                                                <td colspan="2">Status</td>
+                                            </tr>
+                                            <tr class="rocket-info-values">
+                                                <td colspan="2">Recovered</td>
+                                            </tr>
+                                            <tr class="rocket-info-keys">
+                                                <td>Peak Altitude</td>
+                                            </tr>
+                                            <tr class="rocket-info-values">
+                                                <td>27 148<span class="unit">ft</span></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="rocket-info rocket-left rocket-avionics">
+                                        <h3>Avionics / <span style="font-family: Euphemia">ᐊᓂᕐᓂᕐᒃ</span></h3>
+                                        <h4>Student built</h4>
+
+                                        <table>
+                                            <tr class="rocket-info-keys">
+                                                <td colspan="2">Module Designs</td>
+                                            </tr>
+                                            <tr class="rocket-info-values">
+                                                <td colspan="2">ACQUI / ARMING / BACKPLANE<br>COMM / MISSION / POWER</td>
+                                            </tr>
+                                            <tr class="rocket-info-keys">
+                                                <td>Microcontroller</td>
+                                                <td>RTOS</td>
+                                            </tr>
+                                            <tr class="rocket-info-values">
+                                                <td>STM32F405</td>
+                                                <td>F<small>ree</small>RTOS</td>
+                                            </tr>
+                                            <tr class="rocket-info-keys">
+                                                <td>Radio Modem</td>
+                                                <td>IMU</td>
+                                            </tr>
+                                            <tr class="rocket-info-values">
+                                                <td>RFD900x</td>
+                                                <td>XS<small>ens</small> MTi-7</td>
+                                            </tr>
+                                            <tr class="rocket-info-keys">
+                                                <td colspan="2">Power supply</td>
+                                            </tr>
+                                            <tr class="rocket-info-values">
+                                                <td colspan="2">6xLG NCR18650GA</td>
+                                            </tr>
+                                            <tr class="rocket-info-keys">
+                                                <td colspan="2">Wireless Activation</td>
+                                            </tr>
+                                            <tr class="rocket-info-values">
+                                                <td colspan="2">Bluetooth (U-B<small>LOX</small> BMD-360)</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="rocket-info rocket-payload">
+                                        <h3>Timmiaq / <span style="font-family: Euphemia">ᑎᒻᒥᐊᖅ</span></h3>
+                                        <h4>Student built payload</h4>
+                                        <table>
+                                            <tr class="rocket-info-keys">
+                                                <td colspan="2">Objective</td>
+                                            </tr>
+                                            <tr class="rocket-info-values">
+                                                <td colspan="2">Guided descent with Bezier curves</td>
+                                            </tr>
+                                            <tr class="rocket-info-keys">
+                                                <td colspan="2">Ejection</td>
+                                            </tr>
+                                            <tr class="rocket-info-values">
+                                                <td colspan="2">Apogee separation<br />reefed paraglider</td>
+                                            </tr>
+                                            <tr class="rocket-info-keys"></tr>
+                                            <tr class="rocket-info-values"></tr>
+                                            <tr class="rocket-info-keys">
+                                                <td>Form Factor</td>
+                                                <td>Weight</td>
+                                            </tr>
+                                            <tr class="rocket-info-values">
+                                                <td>3U+ CubeSat</td>
+                                                <td>4<span class="unit">kg</span></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="rocket-info rocket-left rocket-fins">
+                                        <h3>Fins</h3>
+                                        <h4>Student built</h4>
+
+                                        <table>
+                                            <tr class="rocket-info-keys">
+                                                <td colspan="2">Material</td>
+                                            </tr>
+                                            <tr class="rocket-info-values">
+                                                <td colspan="2">Cycom 5320 Carbon Fiber</td>
+                                            </tr>
+                                            <tr class="rocket-info-keys">
+                                                <td colspan="2">Manufacturing Process</td>
+                                            </tr>
+                                            <tr class="rocket-info-values">
+                                                <td colspan="2">Single-piece fin canister</td>
+                                            </tr>
+                                            <tr class="rocket-info-keys">
+                                                <td>Fin shape</td>
+                                                <td>Fin flutter</td>
+                                            </tr>
+                                            <tr class="rocket-info-values">
+                                                <td>Clipped delta</td>
+                                                <td>2.25<span class="unit">Mach</span></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="rocket-render">
+                                    <img src="/assets/media/rockets/aarluk3.png">
+                                </div>
+                                <div class="rocket-column rocket-right">
+                                    <div class="rocket-info rocket-right rocket-nose">
+                                        <h3>Nose Cone</h3>
+                                        <h4>Student modified</h4>
+
+                                        <table>
+                                            <tr class="rocket-info-keys">
+                                                <td colspan="2">Manufacturer</td>
+                                            </tr>
+                                            <tr class="rocket-info-values">
+                                                <td colspan="2">MadCow Rocketry</td>
+                                            </tr>
+                                            <tr class="rocket-info-keys">
+                                                <td colspan="2">Type</td>
+                                            </tr>
+                                            <tr class="rocket-info-values">
+                                                <td colspan="2">Ogive 4:1</td>
+                                            </tr>
+                                            <tr class="rocket-info-keys">
+                                                <td colspan="2">Material</td>
+                                            </tr>
+                                            <tr class="rocket-info-values">
+                                                <td colspan="2">Fiberglass</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="rocket-info rocket-right rocket-recovery">
+                                        <h3>Recovery System</h3>
+                                        <h4>Student modified</h4>
+
+                                        <table>
+                                            <tr class="rocket-info-keys">
+                                                <td colspan="2">Recovery Method</td>
+                                            </tr>
+                                            <tr class="rocket-info-values">
+                                                <td colspan="2">Single Deployment<br />Reefed State</td>
+                                            </tr>
+                                            <tr class="rocket-info-keys">
+                                                <td colspan="2">Ejection System</td>
+                                            </tr>
+                                            <tr class="rocket-info-values">
+                                                <td colspan="2">Airbag Inflators</td>
+                                            </tr>
+                                            <tr class="rocket-info-keys">
+                                                <td colspan="2">Parachute Design</td>
+                                            </tr>
+                                            <tr class="rocket-info-values">
+                                                <td colspan="2">Iris Ultra Compact</td>
+                                            </tr>
+                                            <tr class="rocket-info-keys">
+                                                <td>Diameter</td>
+                                                <td>Main Deployment</td>
+                                            </tr>
+                                            <tr class="rocket-info-values">
+                                                <td>96<span class="unit">in</span></td>
+                                                <td>450<span class="unit">m</span></td>
+                                            </tr>
+                                            <tr class="rocket-info-keys">
+                                                <td>Descent speed</td>
+                                            </tr>
+                                            <tr class="rocket-info-values">
+                                                <td>17.7<span class="unit">ft/s</span></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="rocket-info rocket-right rocket-airframe">
+                                        <h3>Airframe</h3>
+                                        <h4>Student built</h4>
+
+                                        <table>
+                                            <tr class="rocket-info-keys">
+                                                <td colspan="2">Main tube material</td>
+                                            </tr>
+                                            <tr class="rocket-info-values">
+                                                <td colspan="2">Cycom 5320 Carbon Fiber<br />E761 7781 E-Glass Fiberglass</td>
+                                            </tr>
+                                            <tr class="rocket-info-keys">
+                                                <td colspan="2">Booster tube material</td>
+                                            </tr>
+                                            <tr class="rocket-info-values">
+                                                <td colspan="2">Cycom 5320 Carbon Fiber</td>
+                                            </tr>
+                                            <tr class="rocket-info-keys">
+                                                <td>External diameter</td>
+                                                <td>Internal diameter</td>
+                                            </tr>
+                                            <tr class="rocket-info-values">
+                                                <td>6.16<span class="unit">in</span></td>
+                                                <td>6.0<span class="unit">in</span></td>
+                                            </tr>
+                                            <tr class="rocket-info-keys">
+                                                <td>Fuselage length</td>
+                                            </tr>
+                                            <tr class="rocket-info-values">
+                                                <td>10.3<span class="unit">ft</span></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="rocket-info rocket-right rocket-booster">
+                                        <h3>Engine</h3>
+                                        <h4>Commercial</h4>
+
+                                        <table>
+                                            <tr class="rocket-info-keys">
+                                                <td colspan="2">Cesaroni Technology</td>
+                                            </tr>
+                                            <tr class="rocket-info-values">
+                                                <td colspan="2">PRO 98 21062O3400-P</td>
+                                            </tr>
+                                            <tr class="rocket-info-keys">
+                                                <td>Maximum thrust</td>
+                                                <td>Total impulse</td>
+                                            </tr>
+                                            <tr class="rocket-info-values">
+                                                <td>4750.3<span class="unit">N</span></td>
+                                                <td>21062.2<span class="unit">N/s</span></td>
+                                            </tr>
+                                            <tr class="rocket-info-keys">
+                                                <td>Burn time</td>
+                                                <td>Max G</td>
+                                            </tr>
+                                            <tr class="rocket-info-values">
+                                                <td>6.16<span class="unit">s</span></td>
+                                                <td>14.5<span class="unit">g</span></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -1100,6 +1357,9 @@
                         <h2>Prix</h2>
                         <div class="award-container">
                             <div class="award-column award-column-left">
+                                <h3>1<sup>re</sup> Launch Canada, 2022</h3>
+                                <span class="award-name">1<sup>re</sup> place, toutes catégories confondues</span>
+                                <span class="award-name">1<sup>re</sup> place, catégorie de base</span>
                                 <h3>3<sup>e</sup> Spaceport America Cup, 2019</h3>
                                 <span class="award-name">2<sup>e</sup> place, 30 000 pieds propulsion commerciale</span>
                                 <h3>1<sup>re</sup> Spaceport America Cup, 2017</h3>

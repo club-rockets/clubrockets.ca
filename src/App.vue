@@ -17,15 +17,12 @@
                     <li><span class="inset"> · </span></li>
                     <li><a href="#contact">{{ $t('nav.contact') }}</a></li>
                     <li><span class="inset"> · </span></li>
-                    <li><a href="https://www.jedonneenligne.org/fdets/CSC/" target="_blank">{{ $t('nav.donation') }}</a>
+                    <li>
+                        <a href="https://www.jedonneenligne.org/fdets/CSC/" target="_blank">{{ $t('nav.donation') }}</a>
                     </li>
                     <li><span class="inset"> · </span></li>
-                    <li>
-                        <a v-if="$i18n.locale == 'fr'" v-on:click="$i18n.locale = 'en'">English</a>
-                    </li>
-                    <li>
-                        <a v-if="$i18n.locale == 'en'" v-on:click="$i18n.locale = 'fr'">Français</a>
-                    </li>
+                    <li v-if="$i18n.locale == 'fr'"><a v-on:click="$i18n.locale = 'en'">English</a></li>
+                    <li v-if="$i18n.locale == 'en'"><a v-on:click="$i18n.locale = 'fr'">Français</a></li>
                 </ul>
             </div>
             <div id="progress" />
@@ -50,7 +47,7 @@
                 <div id="hero-spacer" />
                 <div class="content-container">
                     <about />
-                    <gallery />
+                    <gallery :showModalFn="this.showGalleryModal" />
                 </div>
                 <div id="first" class="parallax-spacer">
                     <div class="parallax-spacer-overlay" />
@@ -75,6 +72,7 @@
                 </footer>
             </div>
         </main>
+        <gallery-modal :target="gallery_modal_target" :showModalFn="this.showGalleryModal" />
     </div>
 </template>
 
@@ -86,6 +84,7 @@ import About from './components/About.vue'
 import Awards from './components/Awards.vue'
 import Contact from './components/Contact.vue'
 import Gallery from './components/Gallery.vue'
+import GalleryModal from './components/GalleryModal.vue'
 import Partners from './components/Partners.vue'
 import Prototypes from './components/Prototypes.vue'
 
@@ -95,8 +94,14 @@ export default defineComponent({
         awards: Awards,
         contact: Contact,
         gallery: Gallery,
+        'gallery-modal': GalleryModal,
         partners: Partners,
         prototypes: Prototypes,
+    },
+    data() {
+        return {
+            gallery_modal_target: null
+        }
     },
     methods: {
         onScroll: function () {
@@ -113,6 +118,9 @@ export default defineComponent({
             }
             var progress_percent = 100 * (main.scrollTop / (main.scrollHeight - height));
             progress.style.width = progress_percent + '%';
+        },
+        showGalleryModal: function (image) {
+            this.gallery_modal_target = image;
         }
     },
     setup() {

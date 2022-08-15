@@ -91,7 +91,7 @@ export default [
                     [
                         {
                             key: { en: "Microcontroller", fr: "Microcontrôleur" },
-                            value: "STM32F407"
+                            value: "STM32F405"
                         },
                         {
                             key: "RTOS",

@@ -36,4 +36,4 @@ export default {
     contact: {
         title: 'Contact us'
     }
-}
+};

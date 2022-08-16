@@ -4,12 +4,20 @@
             <h2>{{ $t('gallery.title') }}</h2>
         </div>
         <div class="gallery-container">
-            <div v-for="image in gallery" :class="'gallery-image-container' + (image.wide ? ' double' : '')" v-on:click="showModal(image.id)">
-                <div class="gallery-image" :style="'background-image: url(/media/gallery/thumb/' + image.id + '.jpg)'">
+            <div
+                v-for="image in gallery"
+                :key="image.id"
+                :class="'gallery-image-container' + (image.wide ? ' double' : '')"
+                @click="showModal(image.id)"
+            >
+                <div
+                    class="gallery-image"
+                    :style="'background-image: url(/media/gallery/thumb/' + image.id + '.jpg)'"
+                >
                     <div class="gallery-overlay">
                         <div class="gallery-overlay-text">
                             <span class="gallery-title">{{ image.title[$i18n.locale] }}</span>
-                            <br />
+                            <br>
                             <span class="gallery-desc">{{ image.event }}</span>
                         </div>
                     </div>
@@ -21,16 +29,16 @@
 
 <script>
 import { defineComponent } from 'vue';
-import GalleryData from '../data/gallery'
+import GalleryData from '../data/gallery';
 
 export default defineComponent({
     props: {
-        showModalFn: { type: Function }
+        showModalFn: { type: Function, default: function() { } }
     },
     data() {
         return {
             gallery: GalleryData.reverse()
-        }
+        };
     },
     methods: {
         showModal: function (image) {

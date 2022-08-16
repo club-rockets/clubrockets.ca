@@ -3,7 +3,14 @@
         <div class="content">
             <h2>{{ $t('prototypes.title') }}</h2>
             <div class="rocket-tabs-links">
-                <div v-for="data in prototypes" :id="'rocket-link-' + data.id" :data-target="data.id" v-on:click="onTabClick" class="rocket-tab-link">
+                <div
+                    v-for="data in prototypes"
+                    :key="data.id"
+                    :id="'rocket-link-' + data.id"
+                    :data-target="data.id"
+                    @click="onTabClick"
+                    class="rocket-tab-link"
+                >
                     <span class="latin">{{ data.name.fr }}</span>
                     <span class="alt">{{ data.name.iu }}</span>
                 </div>
@@ -11,7 +18,11 @@
         </div>
         <div class="rocket-tabs-container">
             <div class="content rocket-tabs-content">
-                <poster v-for="data in prototypes" :key="data.id" :data="data" />
+                <prototype-poster
+                    v-for="data in prototypes"
+                    :key="data.id"
+                    :data="data"
+                />
             </div>
         </div>
     </section>
@@ -20,34 +31,34 @@
 <script>
 import { defineComponent } from 'vue';
 
-import Poster from './prototypes/Poster.vue'
-import PrototypesData from '../data/prototypes'
+import PrototypePoster from './prototypes/PrototypePoster.vue';
+import PrototypesData from '../data/prototypes';
 
 export default defineComponent({
     components: {
-        poster: Poster
+        PrototypePoster
     },
     data() {
         return {
             prototypes: PrototypesData
-        }
+        };
     },
     mounted() {
         if (this.prototypes.length > 0) {
-            document.getElementById('rocket-link-' + this.prototypes[this.prototypes.length - 1].id).classList.add('tab-active')
-            document.getElementById('rocket-tab-' + this.prototypes[this.prototypes.length - 1].id).classList.add('tab-active')
+            document.getElementById('rocket-link-' + this.prototypes[this.prototypes.length - 1].id).classList.add('tab-active');
+            document.getElementById('rocket-tab-' + this.prototypes[this.prototypes.length - 1].id).classList.add('tab-active');
         }
     },
     methods: {
         onTabClick: function(event) {
-            var target = event.explicitOriginalTarget.parentElement.getAttribute('data-target')
+            var target = event.explicitOriginalTarget.parentElement.getAttribute('data-target');
 
             Array.prototype.forEach.call(
                 document.getElementsByClassName('rocket-tab-link'),
                 function (el) {
-                    el.classList.remove('tab-active')
+                    el.classList.remove('tab-active');
                     if (el.getAttribute('data-target') == target) {
-                        el.classList.add('tab-active')
+                        el.classList.add('tab-active');
                     }
                 }
             );
@@ -55,9 +66,9 @@ export default defineComponent({
             Array.prototype.forEach.call(
                 document.getElementsByClassName('rocket-tab-content'),
                 function (el) {
-                    el.classList.remove('tab-active')
+                    el.classList.remove('tab-active');
                     if (el.id == 'rocket-tab-' + target) {
-                        el.classList.add('tab-active')
+                        el.classList.add('tab-active');
                     }
                 }
             );

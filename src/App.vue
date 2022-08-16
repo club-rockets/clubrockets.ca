@@ -18,19 +18,28 @@
                     <li><a href="#contact">{{ $t('nav.contact') }}</a></li>
                     <li><span class="inset"> · </span></li>
                     <li>
-                        <a href="https://www.jedonneenligne.org/fdets/CSC/" target="_blank">{{ $t('nav.donation') }}</a>
+                        <a
+                            href="https://www.jedonneenligne.org/fdets/CSC/"
+                            target="_blank"
+                        >
+                            {{ $t('nav.donation') }}
+                        </a>
                     </li>
                     <li><span class="inset"> · </span></li>
-                    <li v-if="$i18n.locale == 'fr'"><a v-on:click="$i18n.locale = 'en'">English</a></li>
-                    <li v-if="$i18n.locale == 'en'"><a v-on:click="$i18n.locale = 'fr'">Français</a></li>
+                    <li v-if="$i18n.locale == 'fr'">
+                        <a @click="$i18n.locale = 'en'">English</a>
+                    </li>
+                    <li v-if="$i18n.locale == 'en'">
+                        <a @click="$i18n.locale = 'fr'">Français</a>
+                    </li>
                 </ul>
             </div>
             <div id="progress" />
         </header>
-        <video class="visible-desktop" id="hero-vid" poster="/media/hero/frame.jpg" autoplay loop muted>
-            <source type="video/webm" src="/media/hero/ookpik.webm" />
-        </video>
-        <main v-on:scroll="onScroll" id="main">
+        <main
+            @scroll="onScroll"
+            id="main"
+        >
             <div id="home">
                 <!--Dummy div to force scrolling to the top-->
             </div>
@@ -46,62 +55,75 @@
             <div class="parallax-layer parallax-base">
                 <div id="hero-spacer" />
                 <div class="content-container">
-                    <about />
-                    <gallery :showModalFn="this.showGalleryModal" />
+                    <about-section />
+                    <gallery-section :show-modal-fn="this.showGalleryModal" />
                 </div>
-                <div id="first" class="parallax-spacer">
+                <div
+                    id="first"
+                    class="parallax-spacer"
+                >
                     <div class="parallax-spacer-overlay" />
                 </div>
                 <div class="content-container">
-                    <prototypes />
-                    <awards />
+                    <prototypes-section />
+                    <awards-section />
                 </div>
-                <div id="second" class="parallax-spacer">
+                <div
+                    id="second"
+                    class="parallax-spacer"
+                >
                     <div class="parallax-spacer-overlay" />
                 </div>
                 <div class="content-container">
-                    <partners />
-                    <contact />
+                    <partners-section />
+                    <contact-section />
                 </div>
 
                 <footer>
                     <div class="content">
-                        <p class="footer-copyright">© RockÉTS 2022</p>
-                        <p class="footer-love">Fait à Montréal avec ♥</p>
+                        <p class="footer-copyright">
+                            © RockÉTS 2022
+                        </p>
+                        <p class="footer-love">
+                            Fait à Montréal avec ♥
+                        </p>
                     </div>
                 </footer>
             </div>
         </main>
-        <gallery-modal :target="gallery_modal_target" :showModalFn="this.showGalleryModal" />
+        <gallery-modal
+            :target="gallery_modal_target"
+            :show-modal-fn="this.showGalleryModal"
+        />
     </div>
 </template>
 
 <script>
-import { defineComponent } from 'vue'
-import { useI18n } from "vue-i18n";
+import { defineComponent } from 'vue';
+import { useI18n } from 'vue-i18n';
 
-import About from './components/About.vue'
-import Awards from './components/Awards.vue'
-import Contact from './components/Contact.vue'
-import Gallery from './components/Gallery.vue'
-import GalleryModal from './components/GalleryModal.vue'
-import Partners from './components/Partners.vue'
-import Prototypes from './components/Prototypes.vue'
+import AboutSection from './components/AboutSection.vue';
+import AwardsSection from './components/AwardsSection.vue';
+import ContactSection from './components/ContactSection.vue';
+import GallerySection from './components/GallerySection.vue';
+import GalleryModal from './components/GalleryModal.vue';
+import PartnersSection from './components/PartnersSection.vue';
+import PrototypesSection from './components/PrototypesSection.vue';
 
 export default defineComponent({
     components: {
-        about: About,
-        awards: Awards,
-        contact: Contact,
-        gallery: Gallery,
-        'gallery-modal': GalleryModal,
-        partners: Partners,
-        prototypes: Prototypes,
+        AboutSection,
+        AwardsSection,
+        ContactSection,
+        GallerySection,
+        GalleryModal,
+        PartnersSection,
+        PrototypesSection,
     },
     data() {
         return {
             gallery_modal_target: null
-        }
+        };
     },
     methods: {
         onScroll: function () {
@@ -124,7 +146,7 @@ export default defineComponent({
         }
     },
     setup() {
-        const i18n = useI18n();
+        useI18n();
     }
-})
+});
 </script>

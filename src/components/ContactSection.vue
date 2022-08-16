@@ -31,14 +31,14 @@
             </div>
             <div class="social-address">
                 <a href="mailto:club.rockets@etsmtl.net">club.rockets@etsmtl.net</a>
-                <br />
-                <br />
-                1100, rue Notre-Dame Ouest<br />
-                (angle Peel, au sud)<br />
-                Montréal (Québec) H3C 1K3<br />
-                Local A-1764<br />
-                <br />
-                514 396-8800 Poste : 7361<br />
+                <br>
+                <br>
+                1100, rue Notre-Dame Ouest<br>
+                (angle Peel, au sud)<br>
+                Montréal (Québec) H3C 1K3<br>
+                Local A-1764<br>
+                <br>
+                514 396-8800 Poste : 7361<br>
             </div>
         </div>
     </section>
@@ -48,6 +48,6 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-    data() { return {} }
+    data() { return {}; }
 });
 </script>

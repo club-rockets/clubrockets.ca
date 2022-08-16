@@ -28,7 +28,7 @@ html, body {
 }
 
 body {
-    background-image: url('media/hero/frame.jpg');
+    background-image: url('/media/hero/frame.jpg');
     background-size: cover;
     background-attachment: fixed;
 }
@@ -87,11 +87,11 @@ main {
 }
 
 .parallax-spacer#first {
-    background-image: url('media/hero/spacer_1.jpg');
+    background-image: url('/media/hero/spacer_1.jpg');
 }
 
 .parallax-spacer#second {
-    background-image: url('media/hero/spacer_2.jpg');
+    background-image: url('/media/hero/spacer_2.jpg');
 }
 
 /*******************************************************************************
@@ -178,16 +178,6 @@ header.scrolled #progress {
 *******************************************************************************/
 #hero, #hero-spacer {
     height: 100vh;
-}
-
-video#hero-vid {
-    position: fixed;
-    top: 50vh;
-    left: 50vw;
-    transform: translate(-50%, -50%);
-    min-width: 100vw;
-    min-height: 100vh;
-    z-index: -999;
 }
 
 #overlay {
@@ -543,12 +533,12 @@ video#hero-vid {
     text-align: center;
 }
 
-.partners-commandant,
-.partners-pilote,
-.partners-specialiste,
-.partners-ingenieur,
-.partners-astronaute,
-.partners-expert {
+.partners-commanders,
+.partners-pilots,
+.partners-specialists,
+.partners-engineers,
+.partners-astronauts,
+.partners-experts {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -559,38 +549,38 @@ video#hero-vid {
     padding: 1em;
 }
 
-.partners-commandant .partner-logo,
-.partners-commandant .partner-logo img {
+.partners-commanders .partner-logo,
+.partners-commanders .partner-logo img {
     max-width: 20em;
     max-height: 10em;
     margin: auto;
 }
 
-.partners-pilote .partner-logo,
-.partners-pilote .partner-logo img {
+.partners-pilots .partner-logo,
+.partners-pilots .partner-logo img {
     max-width: 17.5em;
     max-height: 8.75em;
     margin: auto;
 }
 
-.partners-specialiste .partner-logo,
-.partners-specialiste .partner-logo img {
+.partners-specialists .partner-logo,
+.partners-specialists .partner-logo img {
     max-width: 15em;
     max-height: 7.5em;
     margin: auto;
 }
 
-.partners-ingenieur .partner-logo,
-.partners-ingenieur .partner-logo img {
+.partners-engineers .partner-logo,
+.partners-engineers .partner-logo img {
     max-width: 12.5em;
     max-height: 6.25em;
     margin: auto;
 }
 
-.partners-astronaute .partner-logo,
-.partners-astronaute .partner-logo img,
-.partners-expert .partner-logo,
-.partners-expert .partner-logo img {
+.partners-astronauts .partner-logo,
+.partners-astronauts .partner-logo img,
+.partners-experts .partner-logo,
+.partners-experts .partner-logo img {
     max-width: 10em;
     max-height: 5em;
     margin: auto;

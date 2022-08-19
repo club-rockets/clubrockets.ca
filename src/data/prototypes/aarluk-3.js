@@ -181,7 +181,7 @@ export default {
                 [
                     {
                         key: { en: 'Ejection System', fr: 'Système d\'éjection' },
-                        value: { en: 'Airbag inflators', fr: 'Gonfleur pour coussin de sécurité' }
+                        value: { en: 'Airbag inflators', fr: 'Dispositif de gonflage' }
                     }
                 ],
                 [
@@ -263,7 +263,7 @@ export default {
                     },
                     {
                         key: { en: 'Total impulse', fr: 'Impulsion totale' },
-                        value: '21062.2 [Ns]'
+                        value: '21 062.2 [Ns]'
                     }
                 ],
                 [

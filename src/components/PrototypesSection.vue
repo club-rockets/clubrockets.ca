@@ -53,6 +53,10 @@ export default defineComponent({
         onTabClick: function(event) {
             var target = event.explicitOriginalTarget.parentElement.getAttribute('data-target');
 
+            if (target == null) {
+                return;
+            }
+
             Array.prototype.forEach.call(
                 document.getElementsByClassName('rocket-tab-link'),
                 function (el) {

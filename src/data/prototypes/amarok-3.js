@@ -1,8 +1,8 @@
 export default {
-    id: 'aarluk-1',
+    id: 'amarok-3',
     name: {
-        fr: 'Aarluk',
-        iu: 'ᐋᕐᓗᒃ',
+        fr: 'Amarok III',
+        iu: 'ᐊᒪᕈᒃ III',
     },
     sections: [
         {
@@ -13,105 +13,125 @@ export default {
                 [
                     {
                         key: { en: 'Name', fr: 'Nom' },
-                        value: 'Aarluk'
+                        value: 'Amarok III'
                     },
                     {
                         key: { en: 'Year', fr: 'Année' },
-                        value: '2019'
+                        value: '2018'
                     }
                 ],
                 [
                     {
                         key: { en: 'Status', fr: 'Statut' },
-                        value: { en: 'Recovered', fr: 'Récupérée' }
+                        value: { en: 'Crash Landing', fr: 'Atterissage "forcé"' }
                     }
                 ],
                 [
                     {
                         key: { en: 'Peak Altitude', fr: 'Altitude maximale' },
-                        value: { en: '25 261 [ft]', fr: '25 261 [pi]' }
+                        value: { en: '9264 [ft]', fr: '9264 [pi]' }
+                    },
+                    {
+                        key: { en: 'Peak Velocity', fr: 'Vélocité maximale' },
+                        value: { en: '916 [ft/s]', fr: '916 [pi/s]' }
                     }
+                ]
+            ]
+        },
+        {
+            id: 'airframe',
+            side: 'left',
+            title: { en: 'Airframe', fr: 'Aérostructure' },
+            subtitle: { en: 'Student built', fr: 'Fabrication étudiante' },
+            rows: [
+                [
+                    {
+                        key: { en: 'Main tube material', fr: 'Matériau du tube principal' },
+                        value: 'S2 Fiberglass'
+                    },
+                ],
+                [
+                    {
+                        key: { en: 'Booster tube material', fr: 'Matériau du tube secondaire' },
+                        value: 'Cycom 5320 Carbon Fiber'
+                    },
+                ],
+                [
+                    {
+                        key: { en: 'External Diameter', fr: 'Diamètre externe' },
+                        value: { en: '5.16 [in]', fr: '5.16 [po]' }
+                    },
+                    {
+                        key: { en: 'Internal Diameter', fr: 'Diamètre interne' },
+                        value: { en: '5.00 [in]', fr: '5.00 [po]' }
+                    }
+                ],
+                [
+                    {
+                        key: { en: 'Fuselage length', fr: 'Longueur du fuselage' },
+                        value: { en: '171 [in]', fr: '171 [po]' }
+                    },
                 ]
             ]
         },
         {
             id: 'avionics',
             side: 'left',
-            title: { en: 'Avionics / ᐊᓂᕐᓂᕐᒃ', fr: 'Avionique / ᐊᓂᕐᓂᕐᒃ' },
+            title: { en: 'Avionics', fr: 'Avionique' },
             subtitle: { en: 'Student built', fr: 'Fabrication étudiante' },
             rows: [
                 [
                     {
-                        key: { en: 'Module designs', fr: 'Modules' },
-                        value: 'ACQUI / COMM / MISSION / MOTHERBOARD'
-                    }
-                ],
-                [
-                    {
-                        key: { en: 'Microcontroller', fr: 'Microcontrôleur' },
-                        value: 'STM32F407'
+                        key: { en: 'Module Dimensions', fr: 'Dimensions du module' },
+                        value: { en: '3.5 [in] × 16 [in]', fr: '3.5 [po] × 16 [po]' }
                     },
                     {
-                        key: 'RTOS',
-                        value: 'FreeRTOS'
+                        key: { en: 'Telemtry Range', fr: 'Portée radio' },
+                        value: { en: '40 000 [ft]', fr: '40 000 [pi]' }
                     }
                 ],
                 [
                     {
-                        key: { en: 'Radio Modem', fr: 'Modem radio' },
-                        value: 'RFD900x'
+                        key: { en: 'Radio module', fr: 'Modem radio' },
+                        value: 'RFD900+ 900 [MHz]'
                     },
-                    {
-                        key: 'IMU',
-                        value: 'XSens MTi-3'
-                    }
                 ],
                 [
+                    {
+                        key: { en: 'Battery', fr: 'Batteries' },
+                        value: 'L[i]F[e]P[o]'
+                    },
                     {
                         key: { en: 'Power supply', fr: 'Alimentation' },
-                        value: '8 × LG 18650HE4'
+                        value: '24 [hrs]'
                     },
                 ],
                 [
                     {
-                        key: { en: 'Wireless Activation', fr: 'Activation sans-fil' },
-                        value: 'Bluetooth (Rigado R41Z)'
-                    },
-                ],
-            ]
-        },
-        {
-            id: 'payload',
-            side: 'left',
-            title: { en: 'Payload', fr: 'Payload' },
-            subtitle: { en: 'Student built', fr: 'Fabrication étudiante' },
-            rows: [
-                [
-                    {
-                        key: { en: 'Objectives', fr: 'Objectif' },
-                        value: { en: 'Measure reservoir volume [via] pressure difference', fr: 'Mesure volumétrique [par] pression différentielle' }
-                    }
-                ],
-                [
-                    {
-                        key: { en: 'Ejection', fr: 'Éjection' },
-                        value: { en: 'Apogee separation\nReefed parachute', fr: 'Séparation à l\'apogée\nParachute retenu' }
-                    }
-                ],
-                [
-                    {
-                        key: { en: 'Form factor', fr: 'Dimensions' },
-                        value: '3U CubeSat'
-                    },
-                    {
-                        key: { en: 'Weight', fr: 'Poid' },
-                        value: '8.8 [lb]'
+                        key: { en: 'Redundacy Altimeter', fr: 'Altimètre redondant' },
+                        value: 'Stratologger CF'
                     },
                 ],
                 [
                     {
-                        key: { en: 'Sensor', fr: 'Instrumentation' },
-                        value: 'Honeywell PX3 Sealed gauge 15-100 [psi]'
+                        key: { en: 'Main system deployment sensor', fr: 'Senseur de déploiment principal' },
+                        value: { en: 'Barometer', fr: 'Baromètre' }
+                    },
+                ],
+                [
+                    {
+                        key: 'Inertial Station MTi-1 Series from XSens',
+                        value: 'Roll/Pitch (Dynamic) 1.0° [RMS]\nYaw (Dynamic) 2° [RMS]'
+                    },
+                ],
+                [
+                    {
+                        key: { en: 'Gyropscope Range', fr: 'Interval du gyroscope' },
+                        value: '2000 [°/s]'
+                    },
+                    {
+                        key: { en: 'Accelerometer', fr: 'Accéléromètre' },
+                        value: '16 [g]'
                     }
                 ]
             ]
@@ -130,14 +150,12 @@ export default {
                 ],
                 [
                     {
-                        key: { en: 'Manufacturing Process', fr: 'Procédés de fabrication'},
-                        value: { en: 'Single-piece fin canister', fr: 'Monopièce / cuisson unique' }
-                    }
-                ],
-                [
-                    {
                         key: { en: 'Fin flutter', fr: 'Vélocité maximale'},
-                        value: '1.84 [Mach]'
+                        value: '2.425 [Mach]'
+                    },
+                    {
+                        key: { en: 'Binding agent', fr: 'Agent de liaison'},
+                        value: 'Epoxy'
                     },
                 ],
             ]
@@ -151,19 +169,25 @@ export default {
                 [
                     {
                         key: { en: 'Manufacturer', fr: 'Fabricant' },
-                        value: 'MadCow Rocketry'
+                        value: 'Rocketry Warehouse'
                     }
                 ],
                 [
                     {
                         key: 'Type',
-                        value: 'Ogive 4:1'
+                        value: 'Von Karman 5.5:1'
                     }
                 ],
                 [
                     {
                         key: { en: 'Material', fr: 'Matériaux'},
                         value: { en: 'Fiberglass', fr: 'Fibre de verre' }
+                    }
+                ],
+                [
+                    {
+                        key: 'Payload',
+                        value: { en: 'Accelerometer', fr: 'Accéléromètre' }
                     }
                 ]
             ]
@@ -189,7 +213,7 @@ export default {
                 [
                     {
                         key: { en: 'Parachute Design', fr: 'Design du parachute' },
-                        value: 'Iris Ultra Compact'
+                        value: 'Disk Gap Band',
                     }
                 ],
                 [
@@ -199,50 +223,14 @@ export default {
                     },
                     {
                         key: { en: 'Main Deployment', fr: 'Déploiment principal' },
-                        value: '450 [m]'
+                        value: { en: '1400 [ft]', fr: '1400 [po]' }
                     }
                 ],
                 [
                     {
                         key: { en: 'Descent speed', fr: 'Vitesse de descente' },
-                        value: { en: '18 [ft/s]', fr: '18 [pi/s]' }
+                        value: { en: '21.4 [ft/s]', fr: '21.4 [pi/s]' }
                     }
-                ]
-            ]
-        },
-        {
-            id: 'airframe',
-            side: 'right',
-            title: { en: 'Airframe', fr: 'Aérostructure' },
-            subtitle: { en: 'Student built', fr: 'Fabrication étudiante' },
-            rows: [
-                [
-                    {
-                        key: { en: 'Main tube material', fr: 'Matériau du tube principal' },
-                        value: 'Cycom 5320 Carbon Fiber'
-                    },
-                ],
-                [
-                    {
-                        key: { en: 'Booster tube material', fr: 'Matériau du tube secondaire' },
-                        value: 'Cycom 5320 Carbon Fiber\nS2 FIBERGLASS'
-                    },
-                ],
-                [
-                    {
-                        key: { en: 'External Diameter', fr: 'Diamètre externe' },
-                        value: { en: '6.16 [in]', fr: '6.16 [po]' }
-                    },
-                    {
-                        key: { en: 'Internal Diameter', fr: 'Diamètre interne' },
-                        value: { en: '6.0 [in]', fr: '6.0 [po]' }
-                    }
-                ],
-                [
-                    {
-                        key: { en: 'Fuselage length', fr: 'Longueur du fuselage' },
-                        value: { en: '10.6 [ft]', fr: '10.6 [pi]' }
-                    },
                 ]
             ]
         },
@@ -255,27 +243,23 @@ export default {
                 [
                     {
                         key: 'Cesaroni Technology',
-                        value: 'PRO 98 21062O3400-P'
+                        value: 'PRO 11077 N2600-P'
                     }
                 ],
                 [
                     {
                         key: { en: 'Maximum thrust', fr: 'Poussée maximale' },
-                        value: '4750.3 [N]'
+                        value: '685.1 [lb]'
                     },
                     {
                         key: { en: 'Total impulse', fr: 'Impulsion totale' },
-                        value: '21 062.2 [lb/s]'
+                        value: '2490.3 [lb/s]'
                     }
                 ],
                 [
                     {
                         key: { en: 'Burn time', fr: 'Temps de combustion' },
-                        value: '6.16 [s]'
-                    },
-                    {
-                        key: 'Max G',
-                        value: '14.6 [G]'
+                        value: '4.28 [s]'
                     }
                 ]
             ]

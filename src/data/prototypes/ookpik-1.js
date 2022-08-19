@@ -53,7 +53,7 @@ export default {
                 [
                     {
                         key: { en: 'Booster tube material', fr: 'Matériau du tube secondaire' },
-                        value: 'Cycom 5320 Carbon Fiber\nS2 Fiberglass'
+                        value: 'Cycom 5320 Carbon Fiber'
                     },
                 ],
                 [
@@ -92,13 +92,19 @@ export default {
                 ],
                 [
                     {
-                        key: { en: 'Telemtry Range', fr: 'Portée de la télémétrie' },
+                        key: { en: 'Telemtry Range', fr: 'Portée radio' },
                         value: { en: '40 000 [ft]', fr: '40 000 [pi]' }
                     },
                     {
                         key: { en: 'Accelerometer', fr: 'Accéléromètre' },
                         value: '16 [g]'
                     }
+                ],
+                [
+                    {
+                        key: { en: 'Avionics module autonomy', fr: 'Autonomie de l\'avionique' },
+                        value: '15 [hrs]'
+                    },
                 ],
                 [
                     {
@@ -110,6 +116,12 @@ export default {
                     {
                         key: { en: 'Redundacy Altimeter', fr: 'Altimètre redondant' },
                         value: 'Stratologger CF'
+                    },
+                ],
+                [
+                    {
+                        key: { en: 'Main system deployment sensor', fr: 'Senseur de déploiment principal' },
+                        value: { en: 'Barometer', fr: 'Baromètre' }
                     },
                 ],
                 [
@@ -161,7 +173,7 @@ export default {
                 [
                     {
                         key: 'Type',
-                        value: 'Von Karman 5:!'
+                        value: 'Von Karman 5.5:1'
                     }
                 ],
                 [
@@ -173,7 +185,7 @@ export default {
                 [
                     {
                         key: 'Payload',
-                        value: { en: 'Accelerometer', fr: 'Accéléromètre' }
+                        value: { en: '360° Camera (WiFi control)\nCalibration mass', fr: 'Caméra 360° (contrôle WiFi)\nMasse de calibration' }
                     }
                 ]
             ]
@@ -193,7 +205,7 @@ export default {
                 [
                     {
                         key: { en: 'Ejection System', fr: 'Système d\'éjection' },
-                        value: { en: 'Airbag inflators', fr: 'Gonfleur pour coussin de sécurité' }
+                        value: { en: 'Airbag inflators', fr: 'Dispositif de gonflage' }
                     }
                 ],
                 [
@@ -239,7 +251,7 @@ export default {
                     },
                     {
                         key: { en: 'Total impulse', fr: 'Impulsion totale' },
-                        value: '4342.64 [lb/s]'
+                        value: '4342.63 [lb/s]'
                     }
                 ],
                 [

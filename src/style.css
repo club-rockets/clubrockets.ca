@@ -25,6 +25,7 @@ html, body {
     line-height: 1.45;
     padding: 0;
     margin: 0;
+    caret-color: transparent;
 }
 
 body {
@@ -474,8 +475,12 @@ header.scrolled #progress {
 .rocket-info .rocket-info-keys {
     font-size: 0.6em;
 }
-.rocket-info .rocket-info-keys td {
+.rocket-info .rocket-info-keys td  {
     padding-top: 0.5em;
+}
+
+.rocket-info .rocket-info-values td {
+    line-height: 1.2;
 }
 
 #rocket-tab-ookpik .rocket-info .rocket-info-keys td {

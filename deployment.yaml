@@ -1,0 +1,110 @@
+
+apiVersion: cert-manager.io/v1
+kind: Issuer
+metadata:
+  name: letsencrypt
+spec:
+  acme:
+    server: https://acme-v02.api.letsencrypt.org/directory
+    email: contact@clubrockets.ca
+    privateKeySecretRef:
+      name: letsencrypt-private-key
+    solvers:
+    - http01:
+        ingress:
+          class: public
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: clubrockets-ca
+  labels:
+    app.kubernetes.io/name: ca.clubrockets.www
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: ca.clubrockets.www
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: ca.clubrockets.www
+    spec:
+      containers:
+      - name: clubrockets-website
+        image: ghcr.io/club-rockets/clubrockets.ca:latest
+        ports:
+          - containerPort: 80
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128M
+          limits:
+            cpu: 500m
+            memory: 256M
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: clubrockets-website
+  labels:
+    app.kubernetes.io/name: ca.clubrockets.www
+spec:
+  type: ClusterIP
+  selector:
+    app.kubernetes.io/name: ca.clubrockets.www
+  ports:
+    - protocol: TCP
+      port: 80
+
+---
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: clubrockets-ca
+  annotations:
+    cert-manager.io/issuer: letsencrypt
+  labels:
+    app.kubernetes.io/name: ca.clubrockets.www
+spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+    - clubrockets.ca
+    secretName: clubrockets-ca-letsencrypt-cert
+  rules:
+  - host: clubrockets.ca
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: clubrockets-website
+            port: 
+              number: 80
+
+---
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: clubrockets-com
+  annotations:
+    cert-manager.io/issuer: letsencrypt
+    nginx.ingress.kubernetes.io/rewrite-target: "https://clubrockets.ca/$1"
+  labels:
+    app.kubernetes.io/name: com.clubrockets.www
+spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+    - clubrockets.com
+    secretName: clubrockets-com-letsencrypt-cert
+  rules:
+  - host: clubrockets.com

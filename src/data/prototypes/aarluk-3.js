@@ -125,7 +125,7 @@ export default {
                 [
                     {
                         key: { en: 'Manufacturing Process', fr: 'Procédés de fabrication'},
-                        value: { en: 'Single-piece fin canister', fr: 'euh...' }
+                        value: { en: 'Single-piece fin canister', fr: 'Monopièce / cuisson unique' }
                     }
                 ],
                 [

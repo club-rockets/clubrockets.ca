@@ -1,0 +1,7 @@
+# Artefacts
+dist/
+node_modules/
+package-lock.json
+
+# IDE
+.vscode/

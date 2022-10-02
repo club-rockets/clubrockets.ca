@@ -29,7 +29,7 @@ html, body {
 }
 
 body {
-    background-image: url('/media/hero/frame.jpg');
+    background-image: url('/media/hero/frame.webp');
     background-size: cover;
     background-attachment: fixed;
 }
@@ -88,11 +88,11 @@ main {
 }
 
 .parallax-spacer#first {
-    background-image: url('/media/hero/spacer_1.jpg');
+    background-image: url('/media/hero/spacer_1.webp');
 }
 
 .parallax-spacer#second {
-    background-image: url('/media/hero/spacer_2.jpg');
+    background-image: url('/media/hero/spacer_2.webp');
 }
 
 /*******************************************************************************

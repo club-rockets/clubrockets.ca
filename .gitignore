@@ -3,5 +3,8 @@ dist/
 node_modules/
 package-lock.json
 
+# Compressed images
+*.webp
+
 # IDE
 .vscode/

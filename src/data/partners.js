@@ -3,13 +3,13 @@ export default [
         name: 'Groupe FusiA',
         tier: 'commanders',
         url: 'https://www.fusia-groupe.com/',
-        logo: 'fusia.png'
+        logo: 'fusia.webp'
     },
     {
         name: 'Stelia Aerospace',
         tier: 'commanders',
         url: 'https://www.stelia-aerospace.com/',
-        logo: 'stelia.png'
+        logo: 'stelia.webp'
     },
     {
         name: 'Club Québecois de Fuséonautique',
@@ -63,7 +63,7 @@ export default [
         name: 'Drillmex',
         tier: 'engineers',
         url: 'https://www.drillmex.com/',
-        logo: 'drillmex.png'
+        logo: 'drillmex.webp'
     },
     {
         name: 'Solidworks',
@@ -75,7 +75,7 @@ export default [
         name: "Technologie supérieure d'alliages",
         tier: 'engineers',
         url: 'https://supalloy.com/',
-        logo: 'tas.png'
+        logo: 'tas.webp'
     },
     {
         name: 'XSens',
@@ -99,13 +99,13 @@ export default [
         name: 'Le Potager du Canal',
         tier: 'astronauts',
         url: 'https://www.lepotagerducanal.com/',
-        logo: 'potagercanal.png'
+        logo: 'potagercanal.webp'
     },
     {
         name: 'Madcow Rocketry',
         tier: 'experts',
         url: 'https://www.madcowrocketry.com/',
-        logo: 'madcow.png'
+        logo: 'madcow.webp'
     },
     {
         name: 'Premier Tech',

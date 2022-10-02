@@ -26,7 +26,7 @@ export default defineComponent({
     },
     computed: {
         source: function() {
-            return this.target ? '/media/gallery/hires/' + this.target + '.jpg' : '';
+            return this.target ? '/media/gallery/' + this.target + '.webp' : '';
         },
         style: function() {
             return this.target ? 'display: block' : 'display: none';

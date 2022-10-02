@@ -12,7 +12,7 @@
             >
                 <div
                     class="gallery-image"
-                    :style="'background-image: url(/media/gallery/thumb/' + image.id + '.jpg)'"
+                    :style="'background-image: url(/media/gallery/' + image.id + '_thumb.webp)'"
                 >
                     <div class="gallery-overlay">
                         <div class="gallery-overlay-text">
